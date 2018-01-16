@@ -2,7 +2,7 @@
 ***
 
 #### 1. Objetivo:
-Desarrollar productos que resuelvan necesidades de usuarios en el consumo de películas.
+Desarrollar un producto que resuelva las  necesidades de los usuarios en el consumo de películas.
 
 #### 2. Descripción del proyecto:
 
