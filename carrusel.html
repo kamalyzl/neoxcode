@@ -108,14 +108,59 @@
 
 <!--section of destacados-->
 <form action="">
-  <img src="assets\images\1.jpg" alt="">
-  <img src="assets\images\2.jpg" alt="">
-  <img src="assets\images\3.jpg" alt="">
-  <img src="assets\images\4.jpg" alt="">
+  <img src="assets\images\1.jpg" alt="" data-toggle="modal" data-target="#myModal">
+  <img src="assets\images\2.jpg" alt="" data-toggle="modal" data-target="#myModal">
+  <img src="assets\images\3.jpg" alt="" data-toggle="modal" data-target="#myModal">
+  <img src="assets\images\4.jpg" alt=""data-toggle="modal" data-target="#myModal">
   <img src="assets\images\5.jpg" alt="">
   <img src="assets\images\6.jpg" alt="">
 </form>
 
+
+<!-- Modal -->
+ <div class="modal fade" id="myModal" role="dialog">
+   <div class="modal-dialog">
+
+     <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h4 class="modal-title">peliculas</h4>
+       </div>
+       <div class="modal-body">
+         <div class ="main-container">
+
+           <div class=" modal_movies" style="margin-left:0;">
+           <h2>titanic</h2>
+           	<div class="row">
+                   <img src ="https://www.ecartelera.com/images/noticias/fotos/39400/39406/1.jpg" />
+                   <ul>
+                       <li>Actores.</li>
+                       <li>director</li>
+                       <li>Año .</li>
+                       <li>genero.</li>
+                       <li>sinopsis</li>
+
+                   </ul>
+                   </div>
+                   <div class="row">
+                   <p>A Silviu tan solo le separan cinco días de la libertad, en ese plazo saldrá del
+                     centro de detención en el que está encerrado. Pero ese tiempo se hará eterno cuando
+                     su madre que lleva años ausente. </p>
+                   <button class = "btn btn-primary">Cines Cerca</button>
+                  <button class = "btn btn-warning" >añadir</button>
+                   </div>
+               </div>
+           	</div>
+           </div>
+           </div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
 
 
 </body>
