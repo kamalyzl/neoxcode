@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NeoxCode</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+  <link href="../assets/icons/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/login.css">
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
@@ -61,11 +61,14 @@
                   <p class="forgot">
                     <a href="#">Se te olvidó la contraseña?</a>
                   </p>
-                  <button class="btn btn-primary btn-sm" type="submit" id="fb-login">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>Inicia con Facebook</button>
-                  <button class="btn btn-success btn-sm" type="submit" id="google-login">
-                    <i class="fa fa-google" aria-hidden="true"></i>Inicia con Google</button>
+                  <button id="inifacebook" class="center-align waves-effect waves-light   btn-primary">
+                    <i class="fa fa-facebook fa-3" aria-hidden="true"></i> Continuar con facebook</button>
+                  <button id="inigoogle" class="center-align waves-effect waves-light btn-danger">
+                    <i class="fa fa-google fa-3" aria-hidden="true"></i> Continuar con Google</button>
                 </div>
+
+
+
                 <!-- Registrarse -->
                 <div id="registrarse">
                   <h4>Registrarse</h4>
@@ -93,8 +96,10 @@
   <!-- Sección scripts-->
   <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../js/helpers/config_firebase.js"></script>
   <script src="../js/sesion.js"></script>
   <script src="../js/login.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>

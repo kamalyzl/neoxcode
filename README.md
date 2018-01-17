@@ -1,4 +1,4 @@
-## Hackathon: NeoxCode
+## Hackathon: NeoxCinema
 ***
 
 #### 1. Objetivo:
@@ -6,14 +6,14 @@ Desarrollar un producto que resuelva las  necesidades de los usuarios en el cons
 
 #### 2. Descripción del proyecto:
 
-![NeoxCode](assets/images/.png)
+![NeoxCinema](assets/images/.png)
 
 
 
 
 
 
-* ¿Te gusto lo hemos hecho para tí? Que esperas animate y registrate en NeoxCode
+* ¿Te gusto lo hemos hecho para tí? Que esperas animate y registrate en NeoxCinema
 
 #### 3. Recursos utilizados
 * HTML5

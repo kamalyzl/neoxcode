@@ -1,10 +1,10 @@
 .back-image{
-  background: url('../assets/images/');
+  background-image: url('../assets/images/fondo2marvel.jpg');
   background-size: cover;
   background-origin: border-box;
   background-position: 20% 60%;
   height: 100vh;
-  opacity:0.9;
+  opacity:0.8;
 }
 
 .container-forms {
@@ -14,7 +14,7 @@
 }
 
 .container-tabs {
-  background-color: #456d86;
+  background-color: #01848f;
   list-style: none;
   padding: 0.5em 2em;
 }
