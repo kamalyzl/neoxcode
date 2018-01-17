@@ -3,3 +3,10 @@ body{
   background:#222326;
   color: white;
 }
+.profile-img {
+  width: 20%;
+  height: auto;
+  border: 5px solid grey;
+  margin: 0 auto;
+  display: block;
+}

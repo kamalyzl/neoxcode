@@ -53,140 +53,42 @@
           </ul>
         </div>
       </nav>
-  <div class="container">
-      <div class="row">
-        <div class="col-xs-4 offset-xs-4 col-md-2 offset-md-5 ">
-          <img id="img-user" class="img-fluid rounded-circle" alt="PhotoUser">
-        </div>
-      </div>
-      <div class="row">
-        <h6 class="center-align bold" id="name-user"></h6>
-      </div>
-    </div>
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-md-12">
-          <ul class="tabs">
-            <li class="tab col s3">
-              <a class="active" href="#bibliografia"> BIBLIOGRAFÍA</a>
-            </li>
-            <li class="tab col s3">
-              <a href="#informacion"> INFORMACIÓN</a>
-            </li>
-            <li class="tab col s3">
-              <a href="#fotos">FOTOS</a>
-            </li>
-            <li class="tab col s3">
-              <a href="#amigos">AMIGOS</a>
-            </li>
-          </ul>
-        </div>
-        <div id="bibliografia" class="col s12">
-          <div class="row">
-            <div class="col s12 m8 offset-m2">
-              <form id="formPost" class="col s12 border form_write">
-                <div class="row ">
-                  <div class="input-field col s12 ">
-                    <i class="material-icons prefix">mode_edit</i>
-                    <textarea id="writepost" class="materialize-textarea textAreaPost" placeholder="¿Qué estas pensando?"></textarea>
-                  </div>
-                </div>
-              </form>
-            </div>
-    
-            <div class="row">
-              <div class=" col s6 left-align">
-                <label>
-                  <input type="file" name="fichero" value="" id="fichero" class="hide">
-                  <img id="imagepost" class="responsive-img" />
-                  <div>
-                    <i class="material-icons pd_left">camera_alt</i>
-                  </div>
-                </label>
-              </div>
-              <div class=" col s6 right-align">
-                <a id="btnEnviar" class="waves-effect waves-light btn btn_publicar" type="submit" value="" disabled>Publicar</a>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div id="boxPost">
-    
-            </div>
-          </div>
-          <!-- Modal Eliminar -->
-          <div id="modal2" class="modal open">
-            <div class="modal-content">
-              <h4>Mensaje</h4>
-              <p>¿Realmente desea eliminar su post?</p>
-            </div>
-            <div class="modal-footer">
-              <a id="deletepost" class="modal-action  waves-effect waves-red btn-flat ">Aceptar</a>
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancelar</a>
-            </div>
+      <div class="container">
+        <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <img id="img-user" alt="" class="img-responsive rounded-circle profile-img text-center">
+          <h3 class="text-center" id="name-user">Name Last name</h3>
           </div>
         </div>
-    
-        <div id="informacion" class="col s12">
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="col s8 offset-s2">
-                  <div class="input-field col s12 m6">
-                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                    <label for="icon_prefix2">Fecha de cumpleaños</label>
-                  </div>
-                  <div class="input-field col s12 m6">
-                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                    <label for="icon_prefix2">Teléfono:</label>
-                  </div>
-                  <div class="input-field col s12 m6">
-                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                    <label for="icon_prefix2">Estudia en:</label>
-                  </div>
-                  <div class="input-field col s12 m6">
-                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                    <label for="icon_prefix2">Lugar de Nacimiento:</label>
-                  </div>
-                </div>
-    
-              </div>
-            </form>
-            <div class="center-align">
-              <a class="waves-effect lwaves-ight btn mg_btn_edit">
-                <i class="material-icons left">edit</i>Editar</a>
-              <a class="waves-effect lwaves-ight btn mg_btn_edit">
-                <i class="material-icons left">save</i>Guardar</a>
-    
-            </div>
-          </div>
-    
-        </div>
-        <div id="fotos" class="col s12">
-          <div class="row">
-            <div class="col s12 m8 offset-m2">
-    
-              <img class="materialboxed margin_photo " data-caption="A picture of a way with a group of trees in a park" width="50%" src="../assets/images/index.jpg">
-    
-              <img class="materialboxed margin_photo" data-caption="A picture of a way with a group of trees in a park" width="50%" src="../assets/images/index.jpg">
-    
-            </div>
-          </div>
-    
-        </div>
-    
-        <div id="amigos" class="col s12">
-        </div>
-    
       </div>
-    </div>
 
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-8">
+                <a class="active" href="#info1"> PELICULAS VISTAS RECIENTEMENTE</a>
+              </div>
+            <div class="col-4">
+                <a href="#informacion"> SIGUIENDO</a>
+            </div>
+         
+          </div>
+
+ 
+          <!-- contenido informacion adicional -->
+          <div class="row">
+            <div id="info1" class="col-12 well oculto">
+              <p>Texto 1</p>
+            </div>
+            <div href="#info2" class="col-12 well oculto">
+              <p>Texto 2</p>
+            </div>
+          </div>
+        </div>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
-  <script src="../js/helpers/config_firebase.js"></script>
   <script src="../js/helpers/functions.js"></script>
   <script src="../js/perfil.js"></script>
   

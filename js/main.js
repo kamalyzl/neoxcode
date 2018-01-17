@@ -13,7 +13,7 @@ $inigoogle.on('click', signInGoogle);
 function initApp() {
   registrationUsers(user.uid, user.displayName, user.email,user.photoURL);
   login(user.uid, user.displayName , user.email);
-  window.location.href = 'carrusel.html';  
+  window.location.href = 'views/home.html';
 }
 function registrationUsers(uid, name, email, photoURL) {
     firebase.database().ref('Usuarios/' + uid).set({
@@ -36,7 +36,7 @@ function signOut() {
   .then(function (result) {
     console.log('Te has desconectado correctamente');
 
-    location.href = "../views/main.html";
+    window.location.href = '../index.html';
   })
   
 };
@@ -64,6 +64,6 @@ function signInGoogle() {
     user = result.user;
     console.log(user);
     initApp();
-    window.location.href = 'home.html';
+    window.location.href = 'views/home.html';
   });
 }
