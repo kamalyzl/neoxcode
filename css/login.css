@@ -1,0 +1,65 @@
+.back-image{
+  background: url('../assets/images/background.jpg');
+  background-size: cover;
+  background-origin: border-box;
+  background-position: 20% 60%;
+  height: 100vh;
+  opacity:0.9;
+
+}
+
+.container-forms {
+  background: #fff;
+  margin-top: 10%;
+  border-radius: 10px;
+}
+
+.container-tabs {
+  background-color: #01848f;
+  list-style: none;
+  padding: 0.5em 2em;
+}
+
+.container-tabs li {
+  width: 30%;
+  display: inline-block;
+}
+
+.container-tabs li a {
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+#name, #email, #pass, #city, #email2, #contrasena2{
+  font-size: 1em;
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid #a0b3b0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: black;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+
+#section-login {
+  padding: 1em 2em;
+}
+
+.contenido-tab > div:last-child {
+  display: none;
+}
+
+.forgot {
+  margin-top: -45px;
+  text-align: left;
+  margin-left: 5em;
+  margin-bottom: 2em;
+}
+
+.contenedor-input {
+  position: relative;
+  margin: 20px 0;
+}
