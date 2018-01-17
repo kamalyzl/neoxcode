@@ -24,6 +24,7 @@ Organizamos las tareas  mediante una serie pasos :
 ![NeoxCinema](assets/images/sket1.jpg)
 ![NeoxCinema](assets/images/sket.jpg)
 ![NeoxCinema](assets/images/skecth.jpg)
+![NeoxCinema](assets/images/pizarra.jpeg)
 
 
 
