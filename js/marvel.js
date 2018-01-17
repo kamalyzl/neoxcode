@@ -6,8 +6,10 @@ var content = $('#content');
 var search = $('#search');
 var comics = $('#comics');
 var series = $('#series');
+var event = $('#event');
 var stories = $('#stories');
-var photo = $('#photo');
+var movie = $('#movie');
+var creators  = $('#creators');
 var personaje = $('#personaje');
 
 function getHero() {
@@ -46,7 +48,6 @@ function getComics() {
         .then(response => {
             var info = response.data.results; // array con todo los datos de los comics 
             console.log(info);
-            console.log(info);
             info.forEach(e => {
                 console.log(e);
                 console.log(e);
@@ -58,10 +59,58 @@ function getComics() {
         })
 }
 
+
+
+function getCreators(){
+    // content.html('');
+    // var movie =     
+    // fetch('http://www.omdbapi.com/?s=hulk&page=2&apikey=8ad4c53d')
+    // .then(Response=>Response.json())
+    // .then(lugares =>{
+    //   console.log(lugares)
+    // })
+    content.html('');
+    const ts = Date.now();
+    const hash = md5(ts + privateKey + publicKey);
+    const URL = 'https://gateway.marvel.com/v1/public/creators?ts=' + ts + '&apikey=' + publicKey + '&hash=' + hash;
+    fetch(URL)
+        .then(response => response.json())
+        .then(response => {
+            var info = response.data.results; // array con todo los datos de los personajes 
+            console.log(info);
+            info.forEach(e => {
+                console.log(e);
+                showCreators(e);
+            });
+        })
+        .catch(function (e) {
+            alert(e);
+        })
+  }
+
+
+
+  function showCreators(e) {
+    var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
+    var hero =
+        '<div class="hero">' +
+        '<h3>' + e.firstName + '</h3>' +
+        '<div class="hero-img">' +
+        '<img class="imgHover" src="' + img + '" alt="">' +
+        '<div class="description">' +
+        //  '<h2> Descripción </h2>    ' + 
+        '<p >' + e.id + '</p>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+    content.append(hero);
+}
+
+
 function showHero(e) {
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
-        '<div class="ed-item l-1-3 s-50 hero">' +
+        '<div class="hero">' +
         '<h3>' + e.name + '</h3>' +
         '<div class="hero-img">' +
         '<img class="imgHover" src="' + img + '" alt="">' +
@@ -79,7 +128,7 @@ function showHero(e) {
 function showComics(e) {
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
-        '<div class="ed-item l-1-3 s-50 hero">' +
+        '<div class="hero">' +
         '<h3>' + e.title + '</h3>' +
         '<div class="hero-img">' +
         '<img class="imgHover" src="' + img + '" alt="">' +
@@ -113,3 +162,5 @@ function showComics(e) {
 
 personaje.on('click', getHero);
 comics.on('click', getComics);
+// movie.on('click', getMovie);
+creators.on('click', getCreators);

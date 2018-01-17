@@ -119,6 +119,7 @@ body{
 .imgHover {
     display: block;
     width: 100%;
+    /* border-radius: 30%; */
 
 }
 
