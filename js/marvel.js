@@ -14,7 +14,7 @@ function getHero() {
     content.html('');
     const ts = Date.now();
     const hash = md5(ts + privateKey + publicKey);
-    const URL = 'http://gateway.marvel.com/v1/public/characters?ts=' + ts + '&apikey=' + publicKey + '&hash=' + hash;
+    const URL = 'https://gateway.marvel.com/v1/public/characters?ts=' + ts + '&apikey=' + publicKey + '&hash=' + hash;
     fetch(URL)
         .then(response => response.json())
         .then(response => {
@@ -39,7 +39,7 @@ function getComics() {
     content.html('');
     const ts = Date.now();
     const hash = md5(ts + privateKey + publicKey);
-    const URL = 'http://gateway.marvel.com/v1/public/comics?ts=' + ts + '&apikey=' + publicKey + '&hash=' + hash;
+    const URL = 'https://gateway.marvel.com/v1/public/comics?ts=' + ts + '&apikey=' + publicKey + '&hash=' + hash;
     fetch(URL)
         .then(response => response.json())
         .then(response => {
