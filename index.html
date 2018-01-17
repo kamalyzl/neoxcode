@@ -45,9 +45,8 @@
             .then((data)=>{
                 baseImageURL = data.images.secure_base_url;
                 configData = data.images;
-                console.log('config:', data);
-                console.log('config fetched');
-                runSearch('jaws')
+                // console.log('config:', data);
+                runSearch('batman')
             })
             .catch(function(err){
                 alert(err);
@@ -58,10 +57,8 @@
             let url = ''.concat(baseURL, 'search/movie?api_key=', APIKEY, '&query=', keyword);
             fetch(url)
             .then(result=>result.json())
-            .then((data)=>{
-                //process the returned data
-                document.getElementById('output').innerHTML = JSON.stringify(data, null, 4);
-                //work with results array...
+            .then((data)=>{ 
+                console.log(data);
                 
             })
         }
