@@ -1,10 +1,11 @@
 .back-image{
-  background-image: url('../assets/images/fondo2marvel.jpg');
+  background: url('../assets/images/background.jpg');
   background-size: cover;
   background-origin: border-box;
   background-position: 20% 60%;
   height: 100vh;
-  opacity:0.8;
+  opacity:0.9;
+
 }
 
 .container-forms {

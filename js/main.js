@@ -6,13 +6,14 @@ var database = firebase.database();
 var conectadoKey = '';
 var $inifacebook = $('#inifacebook');
 var $inigoogle = $('#inigoogle');
+var $logout = $('.logout');
+$logout.on('click', signOut);
 $inifacebook.on('click', signInFacebook);
-
 $inigoogle.on('click', signInGoogle);
 function initApp() {
   registrationUsers(user.uid, user.displayName, user.email,user.photoURL);
   login(user.uid, user.displayName , user.email);
-  window.location.href = '../views/carrusel.html';  
+  window.location.href = 'views/home.html';
 }
 function registrationUsers(uid, name, email, photoURL) {
     firebase.database().ref('Usuarios/' + uid).set({
@@ -28,10 +29,16 @@ function login(uid, name, email) {
   });
 }
 function signOut() {
-  firebase.auth().onAuthStateChanged(function(user) {
-    database.ref('/connected/' + user.uid).remove();
-    window.location.href = '../views/login.html';  
+  firebase.auth().onAuthStateChanged(function (user) {
+  database.ref('/connected/'+ user.uid).remove();
   });
+  firebase.auth().signOut()
+  .then(function (result) {
+    console.log('Te has desconectado correctamente');
+
+    window.location.href = '../index.html';
+  })
+  
 };
 function signInFacebook() {
   var provider = new firebase.auth.FacebookAuthProvider();
@@ -57,8 +64,6 @@ function signInGoogle() {
     user = result.user;
     console.log(user);
     initApp();
-    window.location.href = '../views/carrusel.html';
+    window.location.href = 'views/home.html';
   });
 }
-var $logout = $('.logout');
-$logout.on('click', signOut);
