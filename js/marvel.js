@@ -9,7 +9,7 @@ var series = $('#series');
 var event = $('#event');
 var stories = $('#stories');
 var movie = $('#movie');
-var creators  = $('#creators');
+var creators = $('#creators');
 var personaje = $('#personaje');
 
 function getHero() {
@@ -41,7 +41,7 @@ function getComics() {
     content.html('');
     const ts = Date.now();
     const hash = md5(ts + privateKey + publicKey);
-   
+
     const URL = 'https://gateway.marvel.com/v1/public/comics?ts=' + ts + '&apikey=' + publicKey + '&hash=' + hash;
     fetch(URL)
         .then(response => response.json())
@@ -61,7 +61,7 @@ function getComics() {
 
 
 
-function getCreators(){
+function getCreators() {
     // content.html('');
     // var movie =     
     // fetch('http://www.omdbapi.com/?s=hulk&page=2&apikey=8ad4c53d')
@@ -86,11 +86,114 @@ function getCreators(){
         .catch(function (e) {
             alert(e);
         })
-  }
+}
 
 
+function getEvents() {
+    content.html('');
+    const ts = Date.now();
+    const hash = md5(ts + privateKey + publicKey);
+    const URL = 'https://gateway.marvel.com/v1/public/events?ts=' + ts + '&apikey=' + publicKey + '&hash=' + hash;
+    fetch(URL)
+        .then(response => response.json())
+        .then(response => {
+            var info = response.data.results; // array con todo los datos de los eventos 
+            console.log(info);
+            info.forEach(e => {
+                showEvents(e);
+            });
+        })
+        .catch(function (e) {
+            alert(e);
+        })
+}
 
-  function showCreators(e) {
+function getSeries() {
+    content.html('');
+    const ts = Date.now();
+    const hash = md5(ts + privateKey + publicKey);
+    const URL = 'https://gateway.marvel.com/v1/public/series?ts=' + ts + '&apikey=' + publicKey + '&hash=' + hash;
+    fetch(URL)
+        .then(response => response.json())
+        .then(response => {
+            var info = response.data.results; // array con todo los datos de los eventos 
+            console.log(info);
+            info.forEach(e => {
+                showSeries(e);
+            });
+        })
+        .catch(function (e) {
+            alert(e);
+        })
+}
+
+function getStories() {
+    content.html('');
+    const ts = Date.now();
+    const hash = md5(ts + privateKey + publicKey);
+    const URL = 'https://gateway.marvel.com/v1/public/stories?ts=' + ts + '&apikey=' + publicKey + '&hash=' + hash;
+    fetch(URL)
+        .then(response => response.json())
+        .then(response => {
+            var info = response.data.results; // array con todo los datos de los eventos 
+            console.log(info);
+            info.forEach(e => {
+                showStories(e);
+            });
+        })
+        .catch(function (e) {
+            alert(e);
+        })
+}
+
+function showStories(e) {
+    var hero =
+        '<div class="hero">' +
+        '<h3>' + e.title + '</h3>' +
+        '<div class="description">' +
+        '<h2> Descripción </h2>    ' +
+        '<p >' + e.description + '</p>' +
+        '<p >' + e.end + '</p>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+    content.append(hero);
+}
+
+function showSeries(e) {
+    var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
+    var hero =
+        '<div class="hero">' +
+        '<h3>' + e.title + '</h3>' +
+        '<div class="hero-img">' +
+        '<img class="imgHover" src="' + img + '" alt="">' +
+        '<div class="description">' +
+        '<h2> Descripción </h2>    ' +
+        '<p >' + e.description + '</p>' +
+        '<p >' + e.end + '</p>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+    content.append(hero);
+}
+function showEvents(e) {
+    var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
+    var hero =
+        '<div class="hero">' +
+        '<h3>' + e.title + '</h3>' +
+        '<div class="hero-img">' +
+        '<img class="imgHover" src="' + img + '" alt="">' +
+        '<div class="description">' +
+        '<h2> Descripción </h2>    ' +
+        '<p >' + e.description + '</p>' +
+        '<p >' + e.end + '</p>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+    content.append(hero);
+}
+
+function showCreators(e) {
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
         '<div class="hero">' +
@@ -123,8 +226,6 @@ function showHero(e) {
     content.append(hero);
 }
 
-
-
 function showComics(e) {
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
@@ -141,26 +242,12 @@ function showComics(e) {
     content.append(hero);
 }
 
-
-// function searchHero(e) {
-//     if (search.val() == e.name) {
-//         console.log('coinciden');
-//     }
-
-// }
-
-//funciones llamadas    
-// search.on('keyup', function (e) {
-//     console.log(e.keyCode);
-//     if (e.keyCode === 13) { //13 es en el teclado ENTER
-//         content.html('');
-//         searchHero(search.val());
-//     }
-// })
-
-
-
 personaje.on('click', getHero);
 comics.on('click', getComics);
-// movie.on('click', getMovie);
+event.on('click', getEvents);
 creators.on('click', getCreators);
+series.on('click', getSeries);
+stories.on('click', getStories); 
+// movie.on('click', getMovie);
+// search.on('click', getSearch);
+
