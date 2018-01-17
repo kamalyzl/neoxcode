@@ -1,61 +1,98 @@
 
 body{
-  background:#222326;
-  color: white;
-  overflow-x: hidden;
+  background: gray;
 }
 
-body.fixed-nav {
-  padding-top: 56px;
-}
-.profile-img {
-  width: 20%;
-  height: auto;
-  border: 5px solid grey;
-  margin: 0 auto;
-  display: block;
-}
-/*Movee*/
-#main-container {
-  overflow: hidden;
-}
+  .main-container{
+  background: #d53369;
+  background: -webkit-linear-gradient(to left, #d53369 , #cbad6d);
+  background: linear-gradient(to left, #d53369 , #cbad6d);
 
-#movies-container {
-  padding: 0;
-}
+      }
+  .modal_movies  {
+      width: 600px;
+      color: white;
+      background: rgba(0, 0, 0, 0.26);
+      border-radius: 10px;
+      padding: 3%;
 
-#movies {
-  min-height: 80vh;
-  background-color: #E3E3E3;
-  /* box-shadow: 0px 0px 40px 40px rgba(255, 255, 255, 0.6); */
-  overflow: auto;
-  padding-bottom: 0;
-}
+  	}
 
+  .modal_movies img {
+      float: left;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      }
 
-/*Footer*/
-.page-footer{
-  margin-top: 5em;
-  height: 15em;
-  text-align: center;
-  vertical-align: center;
-  padding-top: 4em;
-  margin-bottom: 0;
-  background-color: #01848f;
-}
-p.copyright{
-  font-size: 1em;
-}
+  .modal_movies ul {
+      list-style-image: url('http://icons.iconarchive.com/icons/yusuke-kamiyamane/fugue/16/tick-small-icon.png');
+      margin-left: 1%;
+      float: left;
+      clear: right
+      }
 
-.logo-footer{
-  width: 14em;
-  height: 100%;
-}
-.social-icons{
-  font-size: 1.5em;
-}
-.fa-facebook-square, .fa-twitter-square, .fa-envelope-o, .fa-exclamation-triangle{
-  color: #FFF;
-  margin-right: 1em;
-  font-size: 3em;
-}
+  .modal_movies button {
+     margin-left: 1%;
+      float: right;
+      }
+
+  .modal_movies h1,h2,h3,h4,h5,h6 {
+      padding-bottom: 2%;
+      border-bottom: 2px dashed rgba(255, 255, 255, 0.41);
+      font-size:20px;
+      text-align : center;
+      text-transform: uppercase;
+      }
+
+  .modal_movies p {
+      text-align: justify;
+
+      }
+  /* estilos de menu*/
+
+    .information {
+       /* outline: 1px solid red; */
+        background: #2a3d46;
+        position: relative;
+        height: 400px;
+        width: 30%;
+        margin-left: 12px;
+    }
+    .information h3 {
+        font-size: 34px;
+        font-size: 3.4rem;
+        font-family: "roboto", sans-serif;
+        font-weight: 500;
+        color: #FFF;
+        padding: 0 15px;
+    }
+    .information .information_menu {
+        padding: 0;
+    }
+    .information .information_menu li {
+        list-style: none;
+        position: relative;
+    }
+
+    .information .information_menu li a {
+        color: #FFF;
+        display: block;
+        padding: 16px 20px;
+        font-size: 15px;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+
+    .information .information_menu li a:hover{
+      background-color: red;
+    }
+
+    .slideshow {
+      overflow: hidden;
+      width: 105%;
+    }
+
+    #menu{
+      margin-top: 20px;
+    }

@@ -55,7 +55,7 @@ body{
        /* outline: 1px solid red; */
         background: #2a3d46;
         position: relative;
-        height: 400px;
+        height: 500px;
         margin-left: 12px;
     }
     .information h3 {
@@ -92,17 +92,33 @@ body{
       width: 105%;
     }
 
-
-
-
     #menu{
       margin-top: 20px;
     }
 
+    #menu-principal  li a:hover{
+      background:#FF0000;
+      border: white;
+      color: #FFFFFF;
+     }
+
+  .navbar-header a b{
+    background-color:#FF0000;
+    padding: 15%;
+    color:#FFFFFF;
+  }
+
+  .dropdown-menu li a:hover {
+    background:#FF0000;
+  }
+
+  #navbar{
+    background:#000000;
+  }
 
     /*estilo del div que muestra imagenes*/
 
-    
+
 .main-title {
     text-align: center;
 }
@@ -134,4 +150,42 @@ body{
     margin: 0;
     padding: 1em;
 
+}
+
+/*footer*/
+.header-font {
+  font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #fd1506;
+}
+
+.bg-primary {
+ background-color: #000 !important;
+}
+
+.bg-circle-outline
+{
+  width: 50px;
+  height: 50px;
+  color:smoke;
+  padding: 8px 2px;
+  border: 2px solid;
+  border-color: smoke;
+  border-radius: 50%;
+  display:inline-block;
+}
+
+.bg-circle-outline a span{
+  font-size: 30px;
+  color:red;
+
+}
+.footer {
+  margin-bottom: 50px;
+	background: #EDEFF1;
+	height: auto;
+	padding-bottom: 30px;
+	position: relative;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	border-top: 1px solid #DDDDDD;
 }
