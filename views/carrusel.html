@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
   <nav class="navbar navbar-default" role="navigation">
@@ -59,10 +59,10 @@
         </a>
         <ul class="dropdown-menu">
           <li><a href="#">Ajustes <span class="glyphicon glyphicon-cog"></span></a></li>
-          <li><a href="#">Perfil <span class="glyphicon glyphicon-user"></a></li>
+          <li><a href="perfil.html">Perfil <span class="glyphicon glyphicon-user"></a></li>
             <li><a href="#">Favoritos <span class="glyphicon glyphicon-star"></a></li>
           <li class="divider"></li>
-          <li><a href="#">Salir</a></li>
+          <li><a href="#" class="logout">Salir</a></li>
         </ul>
       </li>
     </ul>
@@ -108,15 +108,20 @@
 
 <!--section of destacados-->
 <form action="">
-  <img src="assets\images\1.jpg" alt="">
-  <img src="assets\images\2.jpg" alt="">
-  <img src="assets\images\3.jpg" alt="">
-  <img src="assets\images\4.jpg" alt="">
-  <img src="assets\images\5.jpg" alt="">
-  <img src="assets\images\6.jpg" alt="">
+  <img src="../assets\images\1.jpg" alt="">
+  <img src="../assets\images\2.jpg" alt="">
+  <img src="../assets\images\3.jpg" alt="">
+  <img src="../assets\images\4.jpg" alt="">
+  <img src="../assets\images\5.jpg" alt="">
+  <img src="../assets\images\6.jpg" alt="">
 </form>
 
 
-
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+<script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/helpers/config_firebase.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/helpers/functions.js"></script>
 </body>
 </html>
