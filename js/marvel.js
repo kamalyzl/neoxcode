@@ -145,14 +145,42 @@ function getStories() {
 }
 
 function showStories(e) {
+    var nameCharacters = $.map(e.characters.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameComics = $.map(e.comics.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameCreators = $.map(e.creators.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameEvents = $.map(e.events.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameOrigin = $.map(e.originalIssue.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameSeries = $.map(e.series.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+
     var hero =
-        '<div class="hero">' +
-        '<h3>' + e.title + '</h3>' +
-        '<div class="description">' +
-        '<h2> Descripción </h2>    ' +
-        '<p >' + e.description + '</p>' +
-        '<p >' + e.end + '</p>' +
-        '</div>' +
+        '<div class="hero ed-item s-1-3">' +
+        '<h3>' + e.type + '</h3>' +
+        '<div class="">' +
+        '<p >TIPO: ' + e.title + '</p>' +
+        '<p >N° EVENTOS : ' + e.events.available + '</p>' +
+        '<p >NOMBRE DEL EVENTO: ' + nameEvents + '</p>' +
+        '<p >N° DE HISTORIETAS : ' + e.characters.available + '</p>' +
+        '<p >NOMBRES HISTORIETAS: ' + nameCharacters + '</p>' +
+        '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
+        '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
+        '<p >N° DE CREADORES : ' + e.creators.available + '</p>' +
+        '<p >NOMBRES CREADORES: ' + nameCreators + '</p>' +
+        '<p >N° DE SERIES : ' + e.series.available + '</p>' +
+        '<p >NOMBRES SERIES: ' + nameSeries + '</p>' +
+        '<p >N° DE originalIssue : ' + e.originalIssue.available + '</p>' +
+        '<p >NOMBRES originalIssue: ' + nameOrigin + '</p>' +
         '</div>' +
         '</div>';
     content.append(hero);
@@ -174,23 +202,23 @@ function showSeries(e) {
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
         '<div class="hero ed-item s-1-3">' +
-            '<h3>' + e.title + '</h3>' +
-            '<div class="">' +
-                '<img class="" src="' + img + '" alt="">' +
-                '<div class="">' +
-                    '<p >DURACIÓN: ' + e.startYear + '-' + e.endYear + '</p>' +
-                    '<p >TIPO: ' + e.type + '</p>' +
-                    '<p > EDITADO : ' + e.modified + '</p>' +
-                    '<p >N° EVENTOS : ' + e.events.available + '</p>' +
-                    '<p >NOMBRE DEL EVENTO: ' + nameEvents + '</p>' +
-                    '<p >N° DE HISTORIETAS : ' + e.stories.available + '</p>' +
-                    '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
-                    '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
-                    '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
-                    '<p >N° DE CREADORES : ' + e.creators.available + '</p>' +
-                    '<p >NOMBRES CREADORES: ' + nameCreators + '</p>' +
-                '</div>' +
-            '</div>' +
+        '<h3>' + e.title + '</h3>' +
+        '<div class="">' +
+        '<img class="" src="' + img + '" alt="">' +
+        '<div class="">' +
+        '<p >DURACIÓN: ' + e.startYear + '-' + e.endYear + '</p>' +
+        '<p >TIPO: ' + e.type + '</p>' +
+        '<p > EDITADO : ' + e.modified + '</p>' +
+        '<p >N° EVENTOS : ' + e.events.available + '</p>' +
+        '<p >NOMBRE DEL EVENTO: ' + nameEvents + '</p>' +
+        '<p >N° DE HISTORIETAS : ' + e.stories.available + '</p>' +
+        '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
+        '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
+        '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
+        '<p >N° DE CREADORES : ' + e.creators.available + '</p>' +
+        '<p >NOMBRES CREADORES: ' + nameCreators + '</p>' +
+        '</div>' +
+        '</div>' +
         '</div>';
     content.append(hero);
 }
@@ -216,25 +244,25 @@ function showEvents(e) {
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
         '<div class="hero ed-item s-1-3">' +
-            '<h3>' + e.title + '</h3>' +
-            '<div class="">' +
-                '<img class="" src="' + img + '" alt="">' +
-                '<div class="">' +
-                    // '<p >SIGUIENTE EVENTO: ' + e.next.name + ' </p>' +
-                    // '<p >EVENTO PROXIMO: ' + e.previous.name + ' </p>' +
-                    '<p >DESCRIPCION: ' + e.description + '</p>' +
-                    '<p >N° PERSONAJES : ' + e.characters.available + '</p>' +
-                    '<p >PERSONAJES: ' + nameCharacters + '</p>' +
-                    '<p >N° DE HISTORIETAS : ' + e.stories.available + '</p>' +
-                    '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
-                    '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
-                    '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
-                    '<p >N° DE CREADORES : ' + e.creators.available + '</p>' +
-                    '<p >NOMBRES CREADORES: ' + nameCreators + '</p>' +
-                    '<p >N°  SERIES : ' + e.series.available + '</p>' +
-                    '<p >NOMBRES SERIES: ' + nameSeries + '</p>' +
-                '</div>' +
-            '</div>' +
+        '<h3>' + e.title + '</h3>' +
+        '<div class="">' +
+        '<img class="" src="' + img + '" alt="">' +
+        '<div class="">' +
+        // '<p >SIGUIENTE EVENTO: ' + e.next.name + ' </p>' +
+        // '<p >EVENTO PROXIMO: ' + e.previous.name + ' </p>' +
+        '<p >DESCRIPCION: ' + e.description + '</p>' +
+        '<p >N° PERSONAJES : ' + e.characters.available + '</p>' +
+        '<p >PERSONAJES: ' + nameCharacters + '</p>' +
+        '<p >N° DE HISTORIETAS : ' + e.stories.available + '</p>' +
+        '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
+        '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
+        '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
+        '<p >N° DE CREADORES : ' + e.creators.available + '</p>' +
+        '<p >NOMBRES CREADORES: ' + nameCreators + '</p>' +
+        '<p >N°  SERIES : ' + e.series.available + '</p>' +
+        '<p >NOMBRES SERIES: ' + nameSeries + '</p>' +
+        '</div>' +
+        '</div>' +
         '</div>';
     content.append(hero);
 }
@@ -318,23 +346,22 @@ function showComics(e) {
     })
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
-        '<div class="hero ed-item s-1-3">' +
-        '<h3>' + e.title + '</h3>' +
-        '<div class="">' +
-        '<img class="imgHover" src="' + img + '" alt="">' +
-        '<div class="">' +
-        '<p >DESCRIPCION : ' + e.description + '</p>' +
-        '<p >ULTIMA ACTUALIZACION : ' + e.modified + '</p>' +
-        '<p >CANTIDAD DE PAGINAS : ' + e.pageCount + '</p>' +
-        '<p >FORMATO: ' + e.format + '</p>' +
-        '<p >EVENTOS PARTICIPADOS : ' + e.events.available + '</p>' +
-        '<p >NOMBRE DEL EVENTO PARTICIPADO : ' + nameEvents + '</p>' +
-        '<p >N° DE SERIE : ' + e.stories.available + '</p>' +
-        '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
-        '<p >TIPOS DE HISTORIETAS: ' + typeStories + '</p>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
+        `<div class="ed-container border"> 
+        <div class="ed-item s-50">
+            <img src="${img}" alt="">
+          </div>
+          <div class="ed-item s-50">
+             <p >DESCRIPCION :  ${e.description}</p> 
+                <p >ULTIMA ACTUALIZACION : ${e.modified}  </p> 
+                <p >CANTIDAD DE PAGINAS :  ${e.pageCount} </p> 
+                <p >FORMATO:  ${e.format}</p>
+                <p >EVENTOS PARTICIPADOS :  ${e.events.available}</p> 
+                <p >NOMBRE DEL EVENTO PARTICIPADO :  ${nameEvents}</p>
+                    <p >N° DE SERIE :  ${e.stories.available}</p>
+                <p >NOMBRES HISTORIETAS:  ${nameStories}</p>
+                   <p >TIPOS DE HISTORIETAS:  ${typeStories}</p>
+          </div>
+          </div>`
     content.append(hero);
 }
 
@@ -347,3 +374,52 @@ stories.on('click', getStories);
 // movie.on('click', getMovie);
 // search.on('click', getSearch);
 
+
+
+
+var marvel = [
+    'Capitán América El primer vengador',
+    'Agent Carter (temporada 1)',
+    'Agent Carter (temporada 2)',
+    'Agent Carter (corto en el DVD de Iron Man)',
+    'Iron Man',
+    'Iron Man 2',
+    'El increíble Hulk',
+    'El caso único de Marvel: Algo divertido ocurrió de camino al martillo de Thor (corto en el DVD de Capitán América: El primer vengador)',
+    'The Consultant (corto en el DVD de Thor)',
+    'Thor',
+    'Los Vengadores unidos',
+    'Item 47 (corto en el DVD de Los Vengadores unidos)',
+    'Iron Man 3',
+    'All Hail the King (onecorto en el DVD de Thor: El mundo oscuro)',
+    'Agentes de SHIELD (temporada 1, episodios 1-7)',
+    'Thor: El mundo oscuro',
+    'Agentes de SHIELD (temporada 1, episodios 8-16)',
+    'Capitán América: El Soldado de Invierno',
+    'Agentes de SHIELD (temporada 1, episodios 17-22)',
+    'Guardianes de la galaxia',
+    'Guardianes de la galaxia Vol. 2',
+    'Daredevil (temporada 1)',
+    'Agentes de SHIELD (temporada 1, episodios 1-19)',
+    'Vengadores: La era de Ultrón',
+    'Agentes de SHIELD (temporada 2, episodios 20-22)',
+    'Ant-Man',
+    'Agentes de SHIELD (temporada 3, episodios 1-10)',
+    'Jessica Jones (temporada 1)',
+    'Daredevil (temporada 2)',
+    'Agentes de SHIELD (temporada 3, episodios 11-19)',
+    'Capitán América: Civil War',
+    'Agentes de SHIELD (temporada 3, episodios 20-22)',
+    'Agentes de SHIELD : Slingshot (season 1, episodios 1-5)',
+    'Agentes de SHIELD (season 4, eps 1-8)',
+    'Agentes de SHIELD : temporada (season 1, episodio 8)',
+    'Luke Cage (temporada 1)',
+    'Doctor Strange',
+    'Agentes de SHIELD (temporada 4, eps 9-15)',
+    'Iron Fist (temporada 1)',
+    'Agentes de SHIELD (temporada 4, eps 16-22) (E)',
+
+]
+
+
+console.log(marvel);
