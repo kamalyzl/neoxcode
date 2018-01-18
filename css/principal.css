@@ -214,3 +214,9 @@ footer{
 #content{
   color: white;
 }
+
+/* Mapa */
+#mapa{
+  width: 100%;
+  height: 300px;
+}
