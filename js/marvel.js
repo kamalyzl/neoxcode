@@ -145,17 +145,50 @@ function getStories() {
 }
 
 function showStories(e) {
-    var hero =
-        '<div class="hero">' +
-        '<h3>' + e.title + '</h3>' +
-        '<div class="description">' +
-        '<h2> Descripción </h2>    ' +
-        '<p >' + e.description + '</p>' +
-        '<p >' + e.end + '</p>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
-    content.append(hero);
+
+  var nameCharacters = $.map(e.characters.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets
+     return val.name;
+ })
+ var nameComics = $.map(e.comics.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets
+     return val.name;
+ })
+ var nameCreators = $.map(e.creators.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets
+     return val.name;
+ })
+ var nameEvents = $.map(e.events.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets
+     return val.name;
+ })
+ var nameOrigin = $.map(e.originalIssue.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets
+     return val.name;
+ })
+ var nameSeries = $.map(e.series.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets
+     return val.name;
+ })
+
+ var hero =
+     '<div class="hero ed-item s-1-3">' +
+         '<h3>' + e.type + '</h3>' +
+         '<div class="">' +
+                 '<p >TIPO: ' + e.title + '</p>' +
+                 '<p >N° EVENTOS : ' + e.events.available + '</p>' +
+                 '<p >NOMBRE DEL EVENTO: ' + nameEvents + '</p>' +
+                 '<p >N° DE HISTORIETAS : ' + e.characters.available + '</p>' +
+                 '<p >NOMBRES HISTORIETAS: ' + nameCharacters + '</p>' +
+                 '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
+                 '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
+                 '<p >N° DE CREADORES : ' + e.creators.available + '</p>' +
+                 '<p >NOMBRES CREADORES: ' + nameCreators + '</p>' +
+                 '<p >N° DE SERIES : ' + e.series.available + '</p>' +
+                 '<p >NOMBRES SERIES: ' + nameSeries + '</p>' +
+                 '<p >N° DE originalIssue : ' + e.originalIssue.available + '</p>' +
+                 '<p >NOMBRES originalIssue: ' + nameOrigin + '</p>' +
+         '</div>' +
+     '</div>';
+
+
+
+
+ content.append(hero);
 }
 
 function showSeries(e) {
@@ -192,6 +225,10 @@ function showSeries(e) {
         '</div>' +
         '</div>' +
         '</div>';
+
+
+
+
     content.append(hero);
 }
 
@@ -236,6 +273,8 @@ function showEvents(e) {
         '</div>' +
         '</div>' +
         '</div>';
+
+
     content.append(hero);
 }
 
@@ -253,7 +292,7 @@ function showCreators(e) {
         return val.type;
     })
     var hero =
-        '<div class="hero ed-item s-1-3">' +
+        '<div class="ed-item s-1-3">' +
         '<h3>' + e.firstName + '</h3>' +
         '<div class="">' +
         '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
@@ -266,6 +305,8 @@ function showCreators(e) {
         '<p >NOMBRE DE HISTORIETAS: ' + nameStories + '</p>' +
         '</div>' +
         '</div>';
+
+
     content.append(hero);
 }
 
@@ -303,6 +344,10 @@ function showHero(e) {
         '</div>' +
         '</div>' +
         '</div>';
+
+
+
+
     content.append(hero);
 }
 
@@ -319,36 +364,23 @@ function showComics(e) {
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
 
+            `<div class="ed-container border">
+            <div class="ed-item s-50">
+                <img src="${img}" alt="">
+              </div>
+              <div class="ed-item s-50">
+                 <p >DESCRIPCION :  ${e.description}</p>
+                    <p >ULTIMA ACTUALIZACION : ${e.modified}  </p>
+                    <p >CANTIDAD DE PAGINAS :  ${e.pageCount} </p>
+                    <p >FORMATO:  ${e.format}</p>
+                    <p >EVENTOS PARTICIPADOS :  ${e.events.available}</p>
+                    <p >NOMBRE DEL EVENTO PARTICIPADO :  ${nameEvents}</p>
+                    <p >N° DE SERIE :  ${e.stories.available}</p>
+                    <p >NOMBRES HISTORIETAS:  ${nameStories}</p>
+                    <p >TIPOS DE HISTORIETAS:  ${typeStories}</p>
+            </div>
+            </div>`
 
-        '<a type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">'+
-              '<img src="'+ img + '" alt="">'+
-              '</a>'+
-
-        //    <!-- Modal -->
-              '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">'+
-                '<div class="modal-dialog" role="document">'+
-                  '<div class="modal-content">'+
-                   ' <div class="modal-header">'+
-                      '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
-                      '<h4 class="modal-title" id="myModalLabel">'+  e.title +'</h4>'+
-                    '</div>'+
-                    '<div class="modal-body">'+
-                    '<p >DESCRIPCION : ' + e.description + '</p>' +
-                   '<p >ULTIMA ACTUALIZACION : ' + e.modified + '</p>' +
-                   '<p >CANTIDAD DE PAGINAS : ' + e.pageCount + '</p>' +
-                   '<p >FORMATO: ' + e.format + '</p>' +
-                   '<p >EVENTOS PARTICIPADOS : ' + e.events.available + '</p>' +
-                   '<p >NOMBRE DEL EVENTO PARTICIPADO : ' + nameEvents + '</p>' +
-                   '<p >N° DE SERIE : ' + e.stories.available + '</p>' +
-                   '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
-                   '<p >TIPOS DE HISTORIETAS: ' + typeStories + '</p>' +
-                    '</div>'+
-                    '<div class="modal-footer">'+
-                      '<button type="button" class="btn btn-primary">Añadir a mis favoritos</button>'+
-                   ' </div>'+
-                 ' </div>'+
-               ' </div>'+
-             ' </div>';
 
 
 
