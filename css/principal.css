@@ -101,12 +101,18 @@ body{
       background:#FF0000;
       border: white;
       color: #FFFFFF;
+      font-size: 15px;
      }
 
   .navbar-header a b{
     background-color:#FF0000;
     padding: 12%;
     color:#FFFFFF;
+    font-size: 15px;
+  }
+  .dropdown{
+    font-size: 25px;
+   margin-left: -2;
   }
 
   .dropdown-menu li a:hover {
@@ -217,6 +223,30 @@ footer{
 
 /* Mapa */
 #mapa{
-  width: 100%;
-  height: 300px;
+  width: 60vw;
+  height: 80vh;
 }
+
+/*Fondo*/
+.fondo{
+  position: relative;
+  background-image: url('../assets/images/three.jpg');
+  background-size: cover;
+  background-origin: border-box;
+  height: 40vh;
+ 
+}
+.box{
+  border: none;
+  width: 60vw;
+  height: 80vh;
+  font-size: 1.5rem ;
+  margin-left: 20%;
+  color:white;
+  position: absolute;
+}
+  
+.textbox{
+  text-align: justify;
+}
+

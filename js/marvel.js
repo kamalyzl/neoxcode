@@ -213,15 +213,15 @@ function showCreators(e) {
 function showHero(e) {
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
-  '  <div id="content" class="ed item s-1-3">' +
+        '  <div id="content" class="ed item s-1-3">' +
 
-     ' <h3 >' + e.name + '</h3>' +
-     '<img src="' + img + '" alt="">' +
-     '<p >DESCRIPCION : ' + e.description + '</p>' +
-     '<p >ULTIMA ACTUALIZACION : ' + e.modified + '</p>' +
-     '<p >EVENTOS PARTICIPADOS : ' + e.events.available + '</p>' +
+        ' <h3 >' + e.name + '</h3>' +
+        '<img src="' + img + '" alt="">' +
+        '<p >DESCRIPCION : ' + e.description + '</p>' +
+        '<p >ULTIMA ACTUALIZACION : ' + e.modified + '</p>' +
+        '<p >EVENTOS PARTICIPADOS : ' + e.events.available + '</p>' +
 
-     '</div>'
+        '</div>'
     content.append(hero);
 }
 
