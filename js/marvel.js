@@ -20,9 +20,9 @@ function getHero() {
     fetch(URL)
         .then(response => response.json())
         .then(response => {
-            var info = response.data.results; // array con todo los datos de los personajes 
+            var info = response.data.results; // array con todo los datos de los personajes
             console.log(info);
-            var nameHero = $.map(info, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+            var nameHero = $.map(info, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets
                 return val.name;
             })
             info.forEach(e => {
@@ -46,7 +46,7 @@ function getComics() {
     fetch(URL)
         .then(response => response.json())
         .then(response => {
-            var info = response.data.results; // array con todo los datos de los comics 
+            var info = response.data.results; // array con todo los datos de los comics
             console.log(info);
             info.forEach(e => {
                 console.log(e);
@@ -63,7 +63,7 @@ function getComics() {
 
 function getCreators() {
     // content.html('');
-    // var movie =     
+    // var movie =
     // fetch('http://www.omdbapi.com/?s=hulk&page=2&apikey=8ad4c53d')
     // .then(Response=>Response.json())
     // .then(lugares =>{
@@ -76,7 +76,7 @@ function getCreators() {
     fetch(URL)
         .then(response => response.json())
         .then(response => {
-            var info = response.data.results; // array con todo los datos de los personajes 
+            var info = response.data.results; // array con todo los datos de los personajes
             console.log(info);
             info.forEach(e => {
                 console.log(e);
@@ -97,7 +97,7 @@ function getEvents() {
     fetch(URL)
         .then(response => response.json())
         .then(response => {
-            var info = response.data.results; // array con todo los datos de los eventos 
+            var info = response.data.results; // array con todo los datos de los eventos
             console.log(info);
             info.forEach(e => {
                 showEvents(e);
@@ -116,7 +116,7 @@ function getSeries() {
     fetch(URL)
         .then(response => response.json())
         .then(response => {
-            var info = response.data.results; // array con todo los datos de los eventos 
+            var info = response.data.results; // array con todo los datos de los eventos
             console.log(info);
             info.forEach(e => {
                 showSeries(e);
@@ -135,7 +135,7 @@ function getStories() {
     fetch(URL)
         .then(response => response.json())
         .then(response => {
-            var info = response.data.results; // array con todo los datos de los eventos 
+            var info = response.data.results; // array con todo los datos de los eventos
             console.log(info);
             info.forEach(e => {
                 showStories(e);
@@ -201,7 +201,7 @@ function showCreators(e) {
         '<div class="hero-img">' +
         '<img class="imgHover" src="' + img + '" alt="">' +
         '<div class="description">' +
-        //  '<h2> Descripción </h2>    ' + 
+        //  '<h2> Descripción </h2>    ' +
         '<p >' + e.id + '</p>' +
         '</div>' +
         '</div>' +
@@ -213,16 +213,15 @@ function showCreators(e) {
 function showHero(e) {
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
-        '<div class="hero">' +
-        '<h3>' + e.name + '</h3>' +
-        '<div class="hero-img">' +
-        '<img class="imgHover" src="' + img + '" alt="">' +
-        '<div class="description">' +
-        //  '<h2> Descripción </h2>    ' + 
-        '<p >' + e.description + '</p>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
+  '  <div id="content" class="ed item s-1-3">' +
+
+     ' <h3 >' + e.name + '</h3>' +
+     '<img src="' + img + '" alt="">' +
+     '<p >DESCRIPCION : ' + e.description + '</p>' +
+     '<p >ULTIMA ACTUALIZACION : ' + e.modified + '</p>' +
+     '<p >EVENTOS PARTICIPADOS : ' + e.events.available + '</p>' +
+
+     '</div>'
     content.append(hero);
 }
 
@@ -234,7 +233,7 @@ function showComics(e) {
         '<div class="hero-img">' +
         '<img class="imgHover" src="' + img + '" alt="">' +
         '<div class="description">' +
-        //  '<h2> Descripción </h2>    ' + 
+        //  '<h2> Descripción </h2>    ' +
         '<p >' + e.variantDescription + '</p>' +
         '</div>' +
         '</div>' +
@@ -247,7 +246,6 @@ comics.on('click', getComics);
 event.on('click', getEvents);
 creators.on('click', getCreators);
 series.on('click', getSeries);
-stories.on('click', getStories); 
+stories.on('click', getStories);
 // movie.on('click', getMovie);
 // search.on('click', getSearch);
-

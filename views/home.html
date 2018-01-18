@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/ed-grid.min.css">
   <link rel="stylesheet" href="../css/principal.css">
 </head>
 
@@ -99,7 +100,7 @@
 
   <!--section slider de peliculas-->
 
-  <div class="container-fluid">
+  <div class="container-fluid col-xs-10 col-md-7 col-xs-offset-2">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -107,17 +108,17 @@
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
 
-      <div class="carousel-inner">
+      <div class="carousel-inner ">
         <div class="item active">
           <img src="../assets/images/one.jpg" alt="" style="width:100%;">
         </div>
 
         <div class="item">
-          <img src="../assets/images/two.jpeg" alt="" style="width:100%;">
+          <img src="../assets/images/newpan.jpg" alt="" style="width:100%;">
         </div>
 
         <div class="item">
-          <img src="../assets/images/three.jpg" alt="" style="width:100%;">
+          <img src="../assets/images/three.jpg" alt="" style="width:100%,height:80%;">
         </div>
       </div>
 
@@ -135,7 +136,7 @@
   <!--menu-->
   <div class="container-fluid" id="menu">
     <div class="row">
-      <div class=" col-xs-12 2 col-sm-12 col-md-3 information ">
+      <div class=" col-xs-12  col-sm-4 col-md-3 information ">
         <h3>NeoxCinema</h3>
         <ul class="information_menu">
           <li class="active" data-id="1" id="personaje">
@@ -168,10 +169,33 @@
           </li>
         </ul>
       </div>
-      <!-- aqui se muestra las fotos  -->
-      <div id="content" class="col-xs-2"></div>
+
+      <iframe class="col-xs-12  col-sm-8 col-md-8 " width="900" height="520" src="https://www.youtube.com/embed/JcIye2DaZwI?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
+
     </div>
   </div>
+
+  <!-- aqui se muestra las fotos  -->
+  <div  id="content" class="ed-container">
+
+  </div>
+
+
+  <!--INICIO DE COMENTARIO-->
+            <div id="disqus_thread"></div>
+            <script id="dsq-count-scr" src="//jymmak-github-io-neoxcode.disqus.com/count.js" async></script>
+            <script>
+              (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://jymmak-github-io-neoxcode.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the
+              <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+   <!--FIN DE COMENTARIO-->
 
   <footer>
       <div >
@@ -233,7 +257,6 @@
                                 <span class="glyphicon glyphicon-envelope"></span></a>
                               </div>
                               <img src="../assets/images/marvel.png" alt="" id="img-marv">
-
                       </div>
                   </div>
               </div>
@@ -241,21 +264,6 @@
       </div>
   </footer>
 
-  <!--INICIO DE COMENTARIO-->
-            <div id="disqus_thread"></div>
-            <script id="dsq-count-scr" src="//jymmak-github-io-neoxcode.disqus.com/count.js" async></script>
-            <script>
-              (function () { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://jymmak-github-io-neoxcode.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-              })();
-            </script>
-            <noscript>Please enable JavaScript to view the
-              <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-            </noscript>
-            <!--FIN DE COMENTARIO-->
 
   <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
