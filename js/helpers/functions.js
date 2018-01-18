@@ -3,7 +3,7 @@ function sessionActive() {
     if (user) {
       console.log('sesion activa');
     } else {
-      location.href = "../views/main.html";
+      location.href = "../index.html";
     }
   });
 }
