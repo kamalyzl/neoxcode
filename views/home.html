@@ -29,43 +29,16 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul id="menu-principal" class="nav navbar-nav">
         <li>
-          <a href="#">peliculas</a>
-        </li>
-        <li>
           <a href="cines.html">Cines cerca</a>
         </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            generos
-            <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="#">drama</a>
-            </li>
-            <li>
-              <a href="#">romance</a>
-            </li>
-            <li>
-              <a href="#">Acción </a>
-              <li>
-                <a href="#">Animados</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="#"></a>
-              </li>
-          </ul>
-          </li>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" id="titleFld" class="form-control" placeholder="Buscar">
+          </div>
+          <button type="submit" id="searchBtn" class="btn btn-default">
+            <span class="glyphicon glyphicon-search"></span>BUSCAR</button>
+        </form>
       </ul>
-
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" id="titleFld" class="form-control" placeholder="Buscar">
-        </div>
-        <button type="submit" id="searchBtn" class="btn btn-default">
-          <span class="glyphicon glyphicon-search"></span>BUSCAR</button>
-      </form>
 
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -75,12 +48,12 @@
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="#">Ajustes
-                <span class="glyphicon glyphicon-cog"></span>
+              <a class="we" href="#">Quienes somos
+                <span class="glyphicon glyphicon-home"></span>
               </a>
             </li>
             <li>
-              <a href="#">Perfil
+              <a class="" href="#">Perfil
                 <span class="glyphicon glyphicon-user">
               </a>
             </li>
@@ -91,7 +64,7 @@
             </li>
             <li class="divider"></li>
             <li>
-              <a href="#">Salir</a>
+              <a class="sign-off" href="#">Salir</a>
             </li>
           </ul>
         </li>
@@ -171,20 +144,21 @@
         </ul>
       </div>
 
-      <iframe class="col-xs-12  col-sm-8 col-md-8 " width="900" height="520" src="https://www.youtube.com/embed/JcIye2DaZwI?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
+      <iframe class="col-xs-12  col-sm-8 col-md-8 " width="900" height="520" src="https://www.youtube.com/embed/JcIye2DaZwI?ecver=1"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
     </div>
   </div>
 
   <!-- aqui se muestra las fotos  -->
-  <div  id="content" class="ed-container">
+  <div id="content" class="ed-container">
 
   </div>
 
 
-<!-- MODAL  para  imagen de las categorias con toda la informacion  respectiva -->
+  <!-- MODAL  para  imagen de las categorias con toda la informacion  respectiva -->
 
-<!-- <div class="modal-wrapper" id="popup">
+  <!-- <div class="modal-wrapper" id="popup">
    <div class="popup-contenedor">
       <h2>Nombre de la pelicula</h2>
       <p>description</p>
@@ -199,7 +173,7 @@
 
 
 
-<!-- <a type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  <!-- <a type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
 <img src="../assets/images/marvel.png" alt="">
 </a>
 
@@ -222,88 +196,137 @@
 </div> -->
 
 
-<!-- prueba-->
-<!-- <a href="#popup" class="popup-link"><img src="../assets/images/marvel.png" alt=""></a> -->
+  <!-- prueba-->
+  <!-- <a href="#popup" class="popup-link"><img src="../assets/images/marvel.png" alt=""></a> -->
 
   <!--INICIO DE COMENTARIO-->
-            <div id="disqus_thread"></div>
-            <script id="dsq-count-scr" src="//jymmak-github-io-neoxcode.disqus.com/count.js" async></script>
-            <script>
-              (function () { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://jymmak-github-io-neoxcode.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-              })();
-            </script>
-            <noscript>Please enable JavaScript to view the
-              <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-            </noscript>
-   <!--FIN DE COMENTARIO-->
+  <div id="disqus_thread"></div>
+  <script id="dsq-count-scr" src="//jymmak-github-io-neoxcode.disqus.com/count.js" async></script>
+  <script>
+    (function () { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jymmak-github-io-neoxcode.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  <!--FIN DE COMENTARIO-->
 
   <footer>
-      <div >
-          <div class="container">
-              <div class="row">
-                  <div class=" footer col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                      <h3 class="letter"> Comics </h3>
-                      <ul>
-                          <li> <a href="#" class="letter"> Release Calendar </a> </li>
-                          <li> <a href="#" class="letter"> Marvel Unlimited </a> </li>
-                          <li> <a href="#" class="letter"> Redeem Digital </a> </li>
-                          <li> <a href="#" class="letter"> Developer Portal</a> </li>
-                      </ul>
-                  </div>
-                  <div class=" footer col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                      <h3 class="letter"> Character </h3>
-                      <ul>
-                          <li> <a href="#" class="letter"> Spider-Man </a> </li>
-                          <li> <a href="#" class="letter"> Avengers </a> </li>
-                          <li> <a href="#" class="letter"> Iron Man </a> </li>
-                          <li> <a href="#" class="letter"> Captain America </a> </li>
-                      </ul>
-                  </div>
-                  <div class="footer col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                      <h3 class="letter"> Marvel </h3>
-                      <ul>
-                          <li> <a href="#" class="letter"> Sign Up </a> </li>
-                          <li> <a href="#"class="letter"> Marvel Insider </a> </li>
-                          <li> <a href="#" class="letter"> Email Preference</a> </li>
-                          <li> <a href="#" class="letter"> About Marvel </a> </li>
-                      </ul>
-                  </div>
-                  <div class="footer col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                      <h3 class="letter"> Kids </h3>
-                      <ul>
-                          <li> <a href="#" class="letter"> Marvel HQ </a> </li>
-                          <li> <a href="#" class="letter"> kids Games </a> </li>
-                          <li> <a href="#" class="letter"> Kids Videos </a> </li>
-                          <li> <a href="#" class="letter"> Kids Activities </a> </li>
-                      </ul>
-                  </div>
-                  <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
-                      <h3 class="letter"> Contactanos</h3>
-
-                            <div class="list-footer col-xs-5 col-md-12">
-                              <div class="bg-circle-outline">
-                                <a href="https://www.facebook.com/"><span class=" fa fa-facebook-square"></span></a>
-                              </div>
-                              <div class="bg-circle-outline">
-                                <a href="https://twitter.com/" ><span class=" fa fa-twitter"></span></a>
-                              </div>
-
-                              <div class="bg-circle-outline">
-                                <a href="https://www.linkedin.com/company/"><span class=" fa fa-whatsapp"></span></a>
-                              </div>
-                              <div class="bg-circle-outline ">
-                                <a href="https://www.google.com/"><span class=" fa fa-google"></span></a>
-                              </div>
-                            </div>
-                      <img src="../assets/images/marvel.png" alt="" id="img-marv" class="list-footer col-xs-6 col-md-12">
-                  </div>
-              </div>
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class=" footer col-lg-2  col-md-2 col-sm-4 col-xs-6">
+            <h3 class="letter"> Comics </h3>
+            <ul>
+              <li>
+                <a href="#" class="letter"> Release Calendar </a>
+              </li>
+              <li>
+                <a href="#" class="letter"> Marvel Unlimited </a>
+              </li>
+              <li>
+                <a href="#" class="letter"> Redeem Digital </a>
+              </li>
+              <li>
+                <a href="#" class="letter"> Developer Portal</a>
+              </li>
+            </ul>
           </div>
+          <div class=" footer col-lg-2  col-md-2 col-sm-4 col-xs-6">
+            <h3 class="letter"> Character </h3>
+            <ul>
+              <li>
+                <a href="#" class="letter"> Spider-Man </a>
+              </li>
+              <li>
+                <a href="#" class="letter"> Avengers </a>
+              </li>
+              <li>
+                <a href="#" class="letter"> Iron Man </a>
+              </li>
+              <li>
+                <a href="#" class="letter"> Captain America </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer col-lg-2  col-md-2 col-sm-4 col-xs-6">
+            <h3 class="letter"> Marvel </h3>
+            <ul>
+              <li>
+                <a href="#" class="letter"> Sign Up </a>
+              </li>
+              <li>
+                <a href="#" class="letter"> Marvel Insider </a>
+              </li>
+              <li>
+                <a href="#" class="letter"> Email Preference</a>
+              </li>
+              <li>
+                <a href="#" class="letter"> About Marvel </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer col-lg-2  col-md-2 col-sm-4 col-xs-6">
+            <h3 class="letter"> Kids </h3>
+            <ul>
+              <li>
+                <a href="#" class="letter"> Marvel HQ </a>
+              </li>
+              <li>
+                <a href="#" class="letter"> kids Games </a>
+              </li>
+              <li>
+                <a href="#" class="letter"> Kids Videos </a>
+              </li>
+              <li>
+                <a href="#" class="letter"> Kids Activities </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+            <h3 class="letter"> Contactanos</h3>
+
+            <div class="list-footer col-xs-5 col-md-12">
+              <div class="bg-circle-outline">
+                <a href="https://www.facebook.com/">
+                  <span class=" fa fa-facebook-square"></span>
+                </a>
+              </div>
+              <div class="bg-circle-outline">
+                <a href="https://twitter.com/">
+                  <span class=" fa fa-twitter"></span>
+                </a>
+              </div>
+
+              <div class="bg-circle-outline">
+                <a href="https://www.linkedin.com/company/">
+                  <span class=" fa fa-whatsapp"></span>
+                </a>
+              </div>
+              <div class="bg-circle-outline ">
+                <a href="https://www.google.com/">
+                  <span class=" fa fa-google"></span>
+                </a>
+              </div>
+            </div>
+            <img src="../assets/images/marvel.png" alt="" id="img-marv" class="list-footer col-xs-6 col-md-12">
+          </div>
+        </div>
+        <div class="bg-circle-outline " style="background-color:#d34836">
+          <a href="https://www.google.com/">
+            <span class="glyphicon glyphicon-envelope"></span>
+          </a>
+        </div>
+        <img src="../assets/images/marvel.png" alt="" id="img-marv">
       </div>
+    </div>
+    </div>
+    </div>
+    </div>
   </footer>
 
 
