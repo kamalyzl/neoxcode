@@ -59,8 +59,6 @@ function getComics() {
         })
 }
 
-
-
 function getCreators() {
     // content.html('');
     // var movie =     
@@ -161,49 +159,111 @@ function showStories(e) {
 }
 
 function showSeries(e) {
+    var nameEvents = $.map(e.events.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameComics = $.map(e.comics.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameCreators = $.map(e.creators.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameStories = $.map(e.stories.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
-        '<div class="hero">' +
-        '<h3>' + e.title + '</h3>' +
-        '<div class="hero-img">' +
-        '<img class="imgHover" src="' + img + '" alt="">' +
-        '<div class="description">' +
-        '<h2> Descripción </h2>    ' +
-        '<p >' + e.description + '</p>' +
-        '<p >' + e.end + '</p>' +
-        '</div>' +
-        '</div>' +
+        '<div class="hero ed-item s-1-3">' +
+            '<h3>' + e.title + '</h3>' +
+            '<div class="">' +
+                '<img class="" src="' + img + '" alt="">' +
+                '<div class="">' +
+                    '<p >DURACIÓN: ' + e.startYear + '-' + e.endYear + '</p>' +
+                    '<p >TIPO: ' + e.type + '</p>' +
+                    '<p > EDITADO : ' + e.modified + '</p>' +
+                    '<p >N° EVENTOS : ' + e.events.available + '</p>' +
+                    '<p >NOMBRE DEL EVENTO: ' + nameEvents + '</p>' +
+                    '<p >N° DE HISTORIETAS : ' + e.stories.available + '</p>' +
+                    '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
+                    '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
+                    '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
+                    '<p >N° DE CREADORES : ' + e.creators.available + '</p>' +
+                    '<p >NOMBRES CREADORES: ' + nameCreators + '</p>' +
+                '</div>' +
+            '</div>' +
         '</div>';
     content.append(hero);
 }
+
+
 function showEvents(e) {
+    console.log(e);
+    var nameCharacters = $.map(e.characters.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameComics = $.map(e.comics.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameCreators = $.map(e.creators.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameStories = $.map(e.stories.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameSeries = $.map(e.series.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
-        '<div class="hero">' +
-        '<h3>' + e.title + '</h3>' +
-        '<div class="hero-img">' +
-        '<img class="imgHover" src="' + img + '" alt="">' +
-        '<div class="description">' +
-        '<h2> Descripción </h2>    ' +
-        '<p >' + e.description + '</p>' +
-        '<p >' + e.end + '</p>' +
-        '</div>' +
-        '</div>' +
+        '<div class="hero ed-item s-1-3">' +
+            '<h3>' + e.title + '</h3>' +
+            '<div class="">' +
+                '<img class="" src="' + img + '" alt="">' +
+                '<div class="">' +
+                    // '<p >SIGUIENTE EVENTO: ' + e.next.name + ' </p>' +
+                    // '<p >EVENTO PROXIMO: ' + e.previous.name + ' </p>' +
+                    '<p >DESCRIPCION: ' + e.description + '</p>' +
+                    '<p >N° PERSONAJES : ' + e.characters.available + '</p>' +
+                    '<p >PERSONAJES: ' + nameCharacters + '</p>' +
+                    '<p >N° DE HISTORIETAS : ' + e.stories.available + '</p>' +
+                    '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
+                    '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
+                    '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
+                    '<p >N° DE CREADORES : ' + e.creators.available + '</p>' +
+                    '<p >NOMBRES CREADORES: ' + nameCreators + '</p>' +
+                    '<p >N°  SERIES : ' + e.series.available + '</p>' +
+                    '<p >NOMBRES SERIES: ' + nameSeries + '</p>' +
+                '</div>' +
+            '</div>' +
         '</div>';
     content.append(hero);
 }
 
 function showCreators(e) {
-    var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
+    var nameEvents = $.map(e.events.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameComics = $.map(e.comics.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameSeries = $.map(e.series.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.type;
+    })
+    var nameStories = $.map(e.stories.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.type;
+    })
     var hero =
-        '<div class="hero">' +
+        '<div class="hero ed-item s-1-3">' +
         '<h3>' + e.firstName + '</h3>' +
-        '<div class="hero-img">' +
-        '<img class="imgHover" src="' + img + '" alt="">' +
-        '<div class="description">' +
-        //  '<h2> Descripción </h2>    ' + 
-        '<p >' + e.id + '</p>' +
-        '</div>' +
+        '<div class="">' +
+        '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
+        '<p >NOMBRE DE COMICS: ' + nameComics + '</p>' +
+        '<p >N° DE EVENTOS : ' + e.events.available + '</p>' +
+        '<p >NOMBRE DE EVENTOS: ' + nameEvents + '</p>' +
+        '<p >N° DE SERIES : ' + e.series.available + '</p>' +
+        '<p >NOMBRE DE SERIES: ' + nameSeries + '</p>' +
+        '<p >N° DE HISTORIETAS : ' + e.stories.available + '</p>' +
+        '<p >NOMBRE DE HISTORIETAS: ' + nameStories + '</p>' +
         '</div>' +
         '</div>';
     content.append(hero);
@@ -211,15 +271,35 @@ function showCreators(e) {
 
 
 function showHero(e) {
+    var nameEvents = $.map(e.events.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameStories = $.map(e.stories.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameSeries = $.map(e.series.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameComics = $.map(e.comics.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
-        '<div class="hero">' +
+        '<div class="hero ed-item s-1-3">' +
         '<h3>' + e.name + '</h3>' +
         '<div class="hero-img">' +
         '<img class="imgHover" src="' + img + '" alt="">' +
-        '<div class="description">' +
-        //  '<h2> Descripción </h2>    ' + 
-        '<p >' + e.description + '</p>' +
+        '<div class="">' +
+        '<p >DESCRIPCION : ' + e.description + '</p>' +
+        '<p >ULTIMA ACTUALIZACION : ' + e.modified + '</p>' +
+        '<p >EVENTOS PARTICIPADOS : ' + e.events.available + '</p>' +
+        '<p >NOMBRE DEL EVENTO PARTICIPADO : ' + nameEvents + '</p>' +
+        '<p >N° HISTORIETAS : ' + e.stories.available + '</p>' +
+        '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
+        '<p >N° SERIES : ' + e.series.available + '</p>' +
+        '<p >NOMBRES SERIES: ' + nameSeries + '</p>' +
+        '<p >N° COMICS : ' + e.comics.available + '</p>' +
+        '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
         '</div>' +
         '</div>' +
         '</div>';
@@ -227,15 +307,31 @@ function showHero(e) {
 }
 
 function showComics(e) {
+    var nameEvents = $.map(e.events.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var nameStories = $.map(e.stories.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.name;
+    })
+    var typeStories = $.map(e.stories.items, function (val, i) { // Array con los nombres de heroes para la busqueda de restauranets 
+        return val.type;
+    })
     var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
     var hero =
-        '<div class="hero">' +
+        '<div class="hero ed-item s-1-3">' +
         '<h3>' + e.title + '</h3>' +
-        '<div class="hero-img">' +
+        '<div class="">' +
         '<img class="imgHover" src="' + img + '" alt="">' +
-        '<div class="description">' +
-        //  '<h2> Descripción </h2>    ' + 
-        '<p >' + e.variantDescription + '</p>' +
+        '<div class="">' +
+        '<p >DESCRIPCION : ' + e.description + '</p>' +
+        '<p >ULTIMA ACTUALIZACION : ' + e.modified + '</p>' +
+        '<p >CANTIDAD DE PAGINAS : ' + e.pageCount + '</p>' +
+        '<p >FORMATO: ' + e.format + '</p>' +
+        '<p >EVENTOS PARTICIPADOS : ' + e.events.available + '</p>' +
+        '<p >NOMBRE DEL EVENTO PARTICIPADO : ' + nameEvents + '</p>' +
+        '<p >N° DE SERIE : ' + e.stories.available + '</p>' +
+        '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
+        '<p >TIPOS DE HISTORIETAS: ' + typeStories + '</p>' +
         '</div>' +
         '</div>' +
         '</div>';
@@ -247,7 +343,7 @@ comics.on('click', getComics);
 event.on('click', getEvents);
 creators.on('click', getCreators);
 series.on('click', getSeries);
-stories.on('click', getStories); 
+stories.on('click', getStories);
 // movie.on('click', getMovie);
 // search.on('click', getSearch);
 

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/ed-grid.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <title>marvel</title>
 </head>
 
@@ -14,18 +13,41 @@
     <h1 class="main-title">Marvel</h1>
     <input type="text" placeholder="busqueda" id="search">
 
-    <a id="comics">Comics</a>
-    <a id="series">Series</a>
-    <a id="stories">Historietas</a>
-    <a id="photo">Foto</a>
-    <a id="personaje">Personaje</a>   
+    <li class="active" data-id="1" id="personaje">
+        <a>
+          <span class="glyphicon glyphicon-ok-sign"></span> PERSONAJES </a>
+      </li>
+      <li data-id="2" id="comics">
+        <a>
+          <span class="glyphicon glyphicon-ok-sign"></span> COMICS</a>
+      </li>
+      <li data-id="3" id="movie">
+        <a>
+          <span class="glyphicon glyphicon-ok-sign"></span> PELICULAS</a>
+      </li>
+      <li data-id="4" id="creators">
+        <a>
+          <span class="glyphicon glyphicon-ok-sign"></span> CREADORES</a>
+      </li>
+      <li data-id="4" id="series">
+        <a>
+          <span class="glyphicon glyphicon-ok-sign"></span> SERIES</a>
+      </li>
+      <li data-id="4" id="event">
+        <a>
+          <span class="glyphicon glyphicon-ok-sign"></span> EVENTOS</a>
+      </li>
+      <li data-id="4" id="stories">
+        <a>
+          <span class="glyphicon glyphicon-ok-sign"></span> HISTORIAS</a>
+      </li>
 
 
     <!-- aqui se muestra las fotos  -->
-    <div class="row">
+ 
         <div id="content" class="ed-container"></div> 
         
-    </div>
+ 
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/md5.js"></script>
