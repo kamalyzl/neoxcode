@@ -302,15 +302,14 @@ img.kami, img.jenny, img.jymma, img.flora{
   height: 15em;
   width: 15em;
   border-radius: 50em;
-  display:inline- block;
+  display:block;
   margin-top: 5%;
-
 }
-
-.right{
-  vertical-align: center;
+.second{
+  margin-left: 50%;
+  margin-top: 23%;
+  color:white;
 }
-
 .nameFront{
   font-weight: bolder;
   font-size: 1.2em;
