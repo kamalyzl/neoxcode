@@ -32,21 +32,30 @@ Organizamos las tareas  mediante una serie de pasos :
 +  Maquetación de las vistas.
 +  Investigación.
 
-
+# Primer sketch
 ![NeoxCinema](assets/images/sk.jpg)
 ![NeoxCinema](assets/images/sket1.jpg)
 ![NeoxCinema](assets/images/sket.jpg)
 ![NeoxCinema](assets/images/skecth.jpg)
+
+
+# Elección de opciones por cada API
 ![NeoxCinema](assets/images/pizarra.jpeg)
+# Programación de tareas por día
+![NeoxCinema](assets/images/dia1.jpeg)
+![NeoxCinema](assets/images/dia3.jpeg)
+## Ultimo día (4)
+![NeoxCinema](assets/images/dia4.jpeg)
 
 
-#### 3. Recursos utilizados
-* HTML5
-* CSS
-* BOOTSTRAP v4.
-* JQUERY v3.2.1.
-* papel y lapiz (sketchs)
-* API de Marvel
+#### 3. Recursos adicionales utilizados
+* BOOTSTRAP (estrucutra y diseño)
+* JQUERY v3.2.1. (funcionalidad)
+* papel, lapiz, pizarra (sketchs)
+* API de Marvel (data)
+* API Google maps (data)
+* API OMDB  (data)
+* Firebase (backend)
 
 #### 4. Integrantes
 * Kamaly Zapana.
@@ -55,3 +64,12 @@ Organizamos las tareas  mediante una serie de pasos :
 * Jymma Mogollon.
 
 * ¿Te gusto lo hemos hecho para ti? Qué esperas anímate y regístrate en NeoxCinema
+
+#### 5. Producto
+![NeoxCinema](assets/images/read1.png)
+![NeoxCinema](assets/images/read2.png)
+![NeoxCinema](assets/images/read3.png)
+![NeoxCinema](assets/images/read4.png)
+![NeoxCinema](assets/images/read5.png)
+![NeoxCinema](assets/images/read6.png)
+
