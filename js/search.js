@@ -30,8 +30,6 @@ function renderMovies(response) {
     var img = $('<img  id="poster" src="' + movie.Poster + '" width="120px">');
     div.append(img);
     div.append('<span>' + movie.Title + '</span>');
-    div.append('<span>' + movie.imdbID + '</span>');
-    div.append('<span>' + movie.Year + '</span>');
     div.append('<button  data-imdb=' + movie.imdbID + ' data-poster=' + movie.Poster + ' data-year=' + movie.Year + '  data-Title=' + movie.Title + '  type="button" class="btn btn-fav">favoritos</button>');
     movieList.append(div);
 
@@ -49,6 +47,7 @@ function renderMovies(response) {
     firebase.auth().onAuthStateChanged(function (user) {
       var uid = user.uid;
       Addmoviesseen(imdbID, uid, titleMovie, posterMovie, ratingMovie);
+      alert("Se ha añadido a su seccion favoritos");
     });
   });
 }
