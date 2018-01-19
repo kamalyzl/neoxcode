@@ -7,7 +7,7 @@ function init(){
     function handleSearchBtn() {
         var title = inputFld.val();
         console.log(title);
-        var url = 'http://www.omdbapi.com/?&apikey=8ad4c53d&s=' + encodeURI(title) ;
+        var url = 'https://www.omdbapi.com/?&apikey=8ad4c53d&s=' + encodeURI(title) ;
         $.ajax({
           url: url,
           success: renderMovies
@@ -76,3 +76,18 @@ function Addmoviesseen( imdbID,uid,titleMovie, posterMovie, ratingMovie) {
     });
 
 })();
+function singOff() {
+    window.location.href = '../index.html';
+  }
+  $('.sign-off').click(singOff);
+  
+  function next() {
+    window.location.href = '../views/we.html';
+  }
+  $('.we').click(next);
+
+  function backico() {
+    window.location.href = '../views/home.html';
+  }
+  $('.backico').click(backico);
+  
