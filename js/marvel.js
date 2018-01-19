@@ -165,24 +165,25 @@ function showStories(e) {
   });
 
   var hero =
-     '<div class="hero ed-item s-1-3">' +
-         '<h3>' + e.type + '</h3>' +
-         '<div class="">' +
-                 '<p >TIPO: ' + e.title + '</p>' +
-                 '<p >N° EVENTOS : ' + e.events.available + '</p>' +
-                 '<p >NOMBRE DEL EVENTO: ' + nameEvents + '</p>' +
-                 '<p >N° DE HISTORIETAS : ' + e.characters.available + '</p>' +
-                 '<p >NOMBRES HISTORIETAS: ' + nameCharacters + '</p>' +
-                 '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
-                 '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
-                 '<p >N° DE CREADORES : ' + e.creators.available + '</p>' +
-                 '<p >NOMBRES CREADORES: ' + nameCreators + '</p>' +
-                 '<p >N° DE SERIES : ' + e.series.available + '</p>' +
-                 '<p >NOMBRES SERIES: ' + nameSeries + '</p>' +
-                 '<p >N° DE originalIssue : ' + e.originalIssue.available + '</p>' +
-                 '<p >NOMBRES originalIssue: ' + nameOrigin + '</p>' +
-         '</div>' +
-     '</div>';
+
+                    `<div class="ed-container back-categories center-all ed-item s-60">
+                    <div class="ed-item s-100">
+                          <h3 class="title"> ${ e.type }</h3>
+                          <p ><b>TIPO</b> :  ${e.title }</p>
+                          <p ><b>N° COMICS </b>:  ${ e.comics.available}</p>
+                          <p ><b>NOMBRE COMICS</b> :  ${nameComics}</p>
+                          <p ><b>N° PERSONAJES </b>: ${e.characters.available}  </p>
+                          <p ><b>PERSONAJES</b> :  ${nameCharacters} </p>
+                          <p ><b>N° DE CREADORES</b> :  ${e.creators.available}</p>
+                          <p ><b>NOMBRES CREADORES</b> :  ${nameCreators}</p>
+                          <p ><b>N° DE SERIE</b> :  ${e.series.available}</p>
+                          <p ><b>NOMBRES SERIE<b>:  ${nameSeries}</p>
+                          <p ><b>N° DE EVENTOS</b> :  ${e.events.available }</p>
+                          <p ><b>NOMBRES EVENTOS</b>:  ${nameEvents}</p>
+                          <p ><b>N° DE originalIssue</b> :  ${e.originalIssue.available }</p>
+                          <p >NOMBRES originalIssue</b>:  ${nameOrigin}</p>
+                    </div>
+                    </div>`;
 
 
   content.append(hero);
@@ -203,25 +204,22 @@ function showSeries(e) {
   });
   var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
   var hero =
-        '<div class="hero ed-item s-1-3">' +
-        '<h3>' + e.title + '</h3>' +
-        '<div class="">' +
-        '<img class="" src="' + img + '" alt="">' +
-        '<div class="">' +
-        '<p >DURACIÓN: ' + e.startYear + '-' + e.endYear + '</p>' +
-        '<p >TIPO: ' + e.type + '</p>' +
-        '<p > EDITADO : ' + e.modified + '</p>' +
-        '<p >N° EVENTOS : ' + e.events.available + '</p>' +
-        '<p >NOMBRE DEL EVENTO: ' + nameEvents + '</p>' +
-        '<p >N° DE HISTORIETAS : ' + e.stories.available + '</p>' +
-        '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
-        '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
-        '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
-        '<p >N° DE CREADORES : ' + e.creators.available + '</p>' +
-        '<p >NOMBRES CREADORES: ' + nameCreators + '</p>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
+
+        `<div class="ed-container back-categories">
+        <div class="ed-item s-50">
+            <img src="${img}" alt="" class="img_categories">
+          </div>
+          <div class="ed-item s-50">
+               <h3 class="title"> ${e.title}</h3>
+                <p ><b>DURACIÓN</b> : ${e.startYear}  </p>
+                <p ><b>TIPO</b> :  ${e.type} </p>
+                <p ><b>EDITADO</b>:  ${e.modified}</p>
+                <p ><b>N ° EVENTOS</b>:  ${e.events.available}</p>
+                <p ><b>NOMBRES HISTORIETAS </b>:  ${nameStories}</p>
+                <p ><b>N° DE COMICS</b>:  ${e.comics.available}</p>
+                <p ><b>N° DE CREADORES</b>:  ${e.creators.available}</p>
+        </div>
+        </div>`;
 
 
   content.append(hero);
@@ -247,28 +245,25 @@ function showEvents(e) {
   });
   var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
   var hero =
-        '<div class="hero ed-item s-1-3">' +
-        '<h3>' + e.title + '</h3>' +
-        '<div class="">' +
-        '<img class="" src="' + img + '" alt="">' +
-        '<div class="">' +
-        // '<p >SIGUIENTE EVENTO: ' + e.next.name + ' </p>' +
-        // '<p >EVENTO PROXIMO: ' + e.previous.name + ' </p>' +
-        '<p >DESCRIPCION: ' + e.description + '</p>' +
-        '<p >N° PERSONAJES : ' + e.characters.available + '</p>' +
-        '<p >PERSONAJES: ' + nameCharacters + '</p>' +
-        '<p >N° DE HISTORIETAS : ' + e.stories.available + '</p>' +
-        '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
-        '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
-        '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
-        '<p >N° DE CREADORES : ' + e.creators.available + '</p>' +
-        '<p >NOMBRES CREADORES: ' + nameCreators + '</p>' +
-        '<p >N°  SERIES : ' + e.series.available + '</p>' +
-        '<p >NOMBRES SERIES: ' + nameSeries + '</p>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
-
+            `<div class="ed-container back-categories">
+                   <div class="ed-item s-50">
+                       <img src="${img}" alt="" class="img_categories">
+                     </div>
+                     <div class="ed-item s-50">
+                     <h3 class="title"> ${ e.title }</h3>
+                           <p ><b>N° COMICS </b>:  ${e.description}</p>
+                           <p ><b>N° PERSONAJES </b>: ${e.characters.available}  </p>
+                           <p ><b>PERSONAJES </b>:  ${nameCharacters} </p>
+                           <p ><b>N° HISTORIETAS</b>:  ${e.stories.available}</p>
+                           <p ><b>NOMBRE HISTORIETAS</b> :  ${nameStories}</p>
+                           <p ><b>N° COMICS</b> :  ${ e.comics.available}</p>
+                           <p ><b>NOMBRE COMICS </b>:  ${nameComics}</p>
+                           <p ><b>N° DE CREADORES</b> :  ${e.creators.available}</p>
+                           <p ><b>NOMBRES CREADORES</b> :  ${nameCreators}</p>
+                           <p ><b>N° DE SERIE </b>:  ${e.series.available}</p>
+                           <p ><b>NOMBRES SERIE</b>:  ${nameSeries}</p>
+                   </div>
+                   </div>`;
 
   content.append(hero);
 }
@@ -287,19 +282,19 @@ function showCreators(e) {
     return val.type;
   });
   var hero =
-        '<div class="ed-item s-1-3">' +
-        '<h3>' + e.firstName + '</h3>' +
-        '<div class="">' +
-        '<p >N° DE COMICS : ' + e.comics.available + '</p>' +
-        '<p >NOMBRE DE COMICS: ' + nameComics + '</p>' +
-        '<p >N° DE EVENTOS : ' + e.events.available + '</p>' +
-        '<p >NOMBRE DE EVENTOS: ' + nameEvents + '</p>' +
-        '<p >N° DE SERIES : ' + e.series.available + '</p>' +
-        '<p >NOMBRE DE SERIES: ' + nameSeries + '</p>' +
-        '<p >N° DE HISTORIETAS : ' + e.stories.available + '</p>' +
-        '<p >NOMBRE DE HISTORIETAS: ' + nameStories + '</p>' +
-        '</div>' +
-        '</div>';
+                  '<div class="ed-item s-1-3 back-categories">' +
+                  '<h3 class="title">' + e.firstName + '</h3>' +
+                  '<div class="">' +
+                  '<p ><b>N° DE COMICS</b> : ' + e.comics.available + '</p>' +
+                  '<p ><b>NOMBRE DE COMICS</b>: ' + nameComics + '</p>' +
+                  '<p ><b>N °DE EVENTOS </b>: ' + e.events.available + '</p>' +
+                  '<p ><b>NOMBRE DE EVENTOS</b>: ' + nameEvents + '</p>' +
+                  '<p ><b>N° DE SERIES</b> : ' + e.series.available + '</p>' +
+                  '<p ><b>NOMBRE DE SERIES</b>: ' + nameSeries + '</p>' +
+                  '<p ><b>N° DE HISTORIETAS</b> : ' + e.stories.available + '</p>' +
+                  '<p ><b>NOMBRE DE HISTORIETAS</b>: ' + nameStories + '</p>' +
+                  '</div>' +
+                  '</div>';
 
 
   content.append(hero);
@@ -321,24 +316,23 @@ function showHero(e) {
   });
   var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
   var hero =
-        '<div class="hero ed-item s-1-3">' +
-        '<h3>' + e.name + '</h3>' +
-        '<div class="hero-img">' +
-        '<img class="imgHover" src="' + img + '" alt="">' +
-        '<div class="">' +
-        // '<p >DESCRIPCION : ' + e.description + '</p>' +
-        '<p >ULTIMA ACTUALIZACION : ' + e.modified + '</p>' +
-        '<p >EVENTOS PARTICIPADOS : ' + e.events.available + '</p>' +
-        '<p >NOMBRE DEL EVENTO PARTICIPADO : ' + nameEvents + '</p>' +
-        '<p >N° HISTORIETAS : ' + e.stories.available + '</p>' +
-        '<p >NOMBRES HISTORIETAS: ' + nameStories + '</p>' +
-        '<p >N° SERIES : ' + e.series.available + '</p>' +
-        '<p >NOMBRES SERIES: ' + nameSeries + '</p>' +
-        '<p >N° COMICS : ' + e.comics.available + '</p>' +
-        '<p >NOMBRES COMICS: ' + nameComics + '</p>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
+
+                  `<div class="ed-container border back-categories">
+                  <div class="ed-item s-50">
+                      <img src="${img}" alt="" class="img_categories">
+                    </div>
+                    <div class="ed-item s-50">
+                          <h3 class="title"> ${e.name } </h3>
+                          <p ><b>ULTIMA ACTUALIZACION</b> : ${e.modified}  </p>
+                          <p ><b>EVENTOS PARTICIPADOS</b> :  ${ e.events.available} </p>
+                          <p ><b>NOMBRE DEL EVENTO PARTICIPADO</b>: ${nameEvents}</p>
+                          <p ><b>N° HISTORIETAS</b> :  ${e.stories.available}</p>
+                          <p ><b>N° DE SERIE </b>:  ${e.series.available}</p>
+                          <p ><b>NOMBRES SERIES</b>:  ${nameSeries}</p>
+                          <p ><b>N° COMICS</b> :  ${e.comics.available }</p>
+                          <p ><b>NOMBRES COMICS</b>:  ${nameComics }</p>
+                  </div>
+                  </div>`;
 
 
   content.append(hero);
@@ -357,22 +351,22 @@ function showComics(e) {
   var img = e.thumbnail.path + '/portrait_uncanny.' + e.thumbnail.extension;
   var hero =
 
-            `<div class="ed-container border">
-            <div class="ed-item s-50">
-                <img src="${img}" alt="">
-              </div>
-              <div class="ed-item s-50">
-                 <p >DESCRIPCION :  ${e.description}</p>
-                    <p >ULTIMA ACTUALIZACION : ${e.modified}  </p>
-                    <p >CANTIDAD DE PAGINAS :  ${e.pageCount} </p>
-                    <p >FORMATO:  ${e.format}</p>
-                    <p >EVENTOS PARTICIPADOS :  ${e.events.available}</p>
-                    <p >NOMBRE DEL EVENTO PARTICIPADO :  ${nameEvents}</p>
-                    <p >N° DE SERIE :  ${e.stories.available}</p>
-                    <p >NOMBRES HISTORIETAS:  ${nameStories}</p>
-                    <p >TIPOS DE HISTORIETAS:  ${typeStories}</p>
-            </div>
-            </div>`;
+                  `<div class="ed-container back-categories">
+                  <div class="ed-item s-50">
+                      <img src="${img}" alt="" class="img_categories">
+                    </div>
+                    <div class="ed-item s-50">
+                           <p ><b>DESCRIPCION</b> :  ${e.description}</p>
+                          <p ><b>ULTIMA ACTUALIZACION</b> : ${e.modified}  </p>
+                          <p ><b>CANTIDAD DE PAGINAS</b> :  ${e.pageCount} </p>
+                          <p ><b>FORMATO</b>:  ${e.format}</p>
+                          <p ><b>EVENTOS PARTICIPADOS</b> :  ${e.events.available}</p>
+                          <p ><b>NOMBRE DEL EVENTO PARTICIPADO </b>:  ${nameEvents}</p>
+                          <p ><b>N° DE SERIE</b> :  ${e.stories.available}</p>
+                          <p ><b>NOMBRES HISTORIETAS</b>:  ${nameStories}</p>
+                          <p ><b>TIPOS DE HISTORIETAS</b>:  ${typeStories}</p>
+                  </div>
+                  </div>`;
 
 
   content.append(hero);
