@@ -28,43 +28,16 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul id="menu-principal" class="nav navbar-nav">
                 <li>
-                    <a href="#">peliculas</a>
-                </li>
-                <li>
                     <a href="cines.html">Cines cerca</a>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        generos
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">drama</a>
-                        </li>
-                        <li>
-                            <a href="#">romance</a>
-                        </li>
-                        <li>
-                            <a href="#">Acción </a>
-                            <li>
-                                <a href="#">Animados</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#"></a>
-                            </li>
-                    </ul>
-                    </li>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" id="titleFld" class="form-control" placeholder="Buscar">
+                    </div>
+                    <button type="submit" id="searchBtn" class="btn btn-default">
+                        <span class="glyphicon glyphicon-search"></span>BUSCAR</button>
+                </form>
             </ul>
-
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Buscar">
-                </div>
-                <button type="submit" class="btn btn-default">
-                    <span class="glyphicon glyphicon-search"></span>BUSCAR</button>
-            </form>
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -74,29 +47,25 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">Ajustes
-                                <span class="glyphicon glyphicon-cog"></span>
+                            <a class="we" href="#">Quienes somos
+                                <span class="glyphicon glyphicon-home"></span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">Perfil
+                            <a class="" href="#">Perfil
                                 <span class="glyphicon glyphicon-user">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Favoritos
-                                <span class="glyphicon glyphicon-star">
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#">Salir</a>
+                            <a class="sign-off" href="#">Salir</a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
     </nav>
+
 
     <!--section slider de peliculas-->
     <section>
