@@ -64,6 +64,14 @@ function Addmoviesseen( imdbID,uid,titleMovie, posterMovie, ratingMovie) {
         ratingImdb:ratingMovie
       });
 }
-
-
 })();
+
+function singOff() {
+    window.location.href = '../index.html';
+  }
+  $('.sign-off').click(singOff);
+  
+  function next() {
+    window.location.href = '../views/we.html';
+  }
+  $('.we').click(next);
