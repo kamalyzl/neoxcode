@@ -6,6 +6,7 @@ jQuery(document).ready(function () {
     if (user) {
       // User is signed in.
       var displayName = user.displayName;
+      console.log(displayName);
       var photoURL = user.photoURL;
       var uid = user.uid;
       var providerData = user.providerData;
@@ -14,7 +15,7 @@ jQuery(document).ready(function () {
       // ...
     } else {
       // User is signed out.
-      // ...
+      console.log("No ha iniciado sesion");
     }
   });
   $(".oculto").hide();
@@ -30,4 +31,26 @@ jQuery(document).ready(function () {
       return false;
     }
   });
+
+  function viewFavorites() {
+    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.database().ref('/Moviessen/' + user.uid).on('child_added', function (snapshot) {
+      var html = '';
+      var key = snapshot.key;
+      var title = snapshot.val().Title;
+      var posterMovie = snapshot.val().posterMovie;
+
+      console.log(user.uid);
+      console.log(posterMovie);
+      html += '<div class="row">' +
+      '<div class="col-xs-3 col-md-3">' +
+      '<img class="responsive-img movie-img" id="img-movie" src=' + posterMovie + ' alt="">' +
+      '</div>' +
+      '</div>/';
+      $('#posterMovie').append(html);
+
+  });
+});
+};
+viewFavorites();
 });
