@@ -75,3 +75,9 @@ function singOff() {
     window.location.href = '../views/we.html';
   }
   $('.we').click(next);
+
+  function backico() {
+    window.location.href = '../views/home.html';
+  }
+  $('.backico').click(backico);
+  

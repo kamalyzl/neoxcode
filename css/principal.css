@@ -199,12 +199,16 @@ iframe{
   color:black;
 }
 #img-marv{
-  width: 100px;
+  width: 16vw;
+  height: 20vh;
+  margin-left: 15%;
+  margin-top: 3%;
 
 }
 
 footer{
   background-color:#323434;
+  
 }
 .letter{
   color: white;
@@ -215,6 +219,8 @@ footer{
   list-style: none;
   color: white;
   text-decoration:none;
+  margin-left: 25%;
+
 }
 
 /* #content{
@@ -281,13 +287,42 @@ a.popup-cerrar {
   border: none;
   width: 60vw;
   height: 80vh;
-  font-size: 1.5rem ;
+  font-size:1.5rem ;
   margin-left: 20%;
   color:white;
   position: absolute;
+  margin-top: 6%;
 }
   
 .textbox{
   text-align: justify;
 }
 
+img.kami, img.jenny, img.jymma, img.flora{
+  height: 15em;
+  width: 15em;
+  border-radius: 50em;
+  display:inline- block;
+  margin-top: 5%;
+
+}
+
+.right{
+  vertical-align: center;
+}
+
+.nameFront{
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+.back{
+  margin-left: 0;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.backico{
+  font-size: 45px;
+  cursor:pointer;
+  color: white;
+}
