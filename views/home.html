@@ -8,65 +8,75 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/icons/font-awesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="stylesheet" href="../css/ed-grid.min.css">
   <link href="https://fonts.googleapis.com/css?family=Anton|Risque|Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="../css/principal.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-default" role="navigation" id="navbar">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Desplegar navegación</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <b>NeoxCinema</b>
-      </a>
-    </div>
-
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul id="menu-principal" class="nav navbar-nav">
-        <li>
-          <a href="cines.html">Cines cerca</a>
-        </li>
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" id="titleFld" class="form-control" placeholder="Buscar">
-          </div>
-          <button type="submit" id="searchBtn" class="btn btn-default">
-            <span class="glyphicon glyphicon-search"></span>BUSCAR</button>
-        </form>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <span class="glyphicon glyphicon-user"></span>
-            <b class="caret"></b>
+  
+    <nav class="navbar navbar-default" role="navigation" id="navbar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Desplegar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="home.html">
+            <b>NeoxCinema</b>
           </a>
-          <ul class="dropdown-menu">
+        </div>
+    
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul id="menu-principal" class="nav navbar-nav">
             <li>
-              <a class="we" href="#">Quienes somos
-                <span class="glyphicon glyphicon-home"></span>
-              </a>
+              <a href="cines.html">Cines cerca</a>
+              <span id="hola"></span>
             </li>
-            <li>
-              <a class="" href="#">Perfil
-                <span class="glyphicon glyphicon-user">
+    
+            <div class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" id="titleFld" class="form-control" placeholder="Buscar">
+              </div>
+              <button type="submit" id="searchBtn" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>BUSCAR</button>
+            </div>
+          </ul>
+    
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img id="userphoto" width="50px">
+                </span>
+                <b class="caret"></b>
               </a>
-            </li>
-            <li class="divider"></li>
-            <li>
-              <a class="sign-off" href="#">Salir</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="we" href="#">Quienes somos
+                    <span class="glyphicon glyphicon-home"></span>
+                  </a>
+                </li>
+                <li>
+                  <a class="" href="perfil.html">Perfil
+                    <span class="glyphicon glyphicon-user">
+                  </a>
+                </li>
+                <li>
+                  <a href="perfil.html">Favoritos
+                    <span class="glyphicon glyphicon-star">
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a class="sign-off" id="logout" href="#">Salir</a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        </div>
+      </nav>
 
   <!--section slider de peliculas-->
 
@@ -117,7 +127,11 @@
             <a>
               <span class="glyphicon glyphicon-ok-sign"></span> COMICS</a>
           </li>
+<<<<<<< HEAD
 
+=======
+     
+>>>>>>> 8378988e5baae1cb67c4ef07a4dc77d03a16cfed
           <li data-id="4" id="creators">
             <a>
               <span class="glyphicon glyphicon-ok-sign"></span> CREADORES</a>
@@ -235,6 +249,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="../js/helpers/config_firebase.js"></script>
+  <script src="../js/helpers/functions.js"></script>
+  <script src="../js/main.js"></script>
   <script src="../js/md5.js"></script>
   <script src="../js/marvel.js"></script>
   <script src="../js/app.js"></script>

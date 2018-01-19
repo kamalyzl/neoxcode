@@ -1,4 +1,4 @@
-(function(){
+  (function(){
     init();
 function init(){
     var inputFld=$('#titleFld');
@@ -64,8 +64,18 @@ function Addmoviesseen( imdbID,uid,titleMovie, posterMovie, ratingMovie) {
         ratingImdb:ratingMovie
       });
 }
-})();
+    
+    var searchBtn = $('#searchBtn');
 
+    searchBtn.on('click', function (event) {
+      var inputFld = $('#titleFld').val();
+      localStorage.setItem("title", inputFld);
+      var title = localStorage.getItem("title");
+      console.log(title);
+      window.location.href = 'movies.html';
+    });
+
+})();
 function singOff() {
     window.location.href = '../index.html';
   }
