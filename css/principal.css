@@ -326,3 +326,28 @@ img.kami, img.jenny, img.jymma, img.flora{
   cursor:pointer;
   color: white;
 }
+
+/* Perfil */
+
+img#img-user {
+  width: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+h3#name-user {
+  color: wheat;
+  font-weight: bold;
+}
+h3.active {
+  color: red;
+  color: #406c92;
+}
+
+div#posterMovie {
+  margin-left: 50px;
+}
+
+.navbar-collapse.navbar-ex1-collapse.collapse.in {
+  overflow: hidden;
+}
