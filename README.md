@@ -1,5 +1,5 @@
 # NeoxCinema
-
+Somos una plataforma donde encontrarás toda información relacionada a Marvel. Tenemos información de personajes, historietas, series, entre otros en un solo lugar.
 ![read1](https://user-images.githubusercontent.com/32285958/38003206-12f77d4c-31fc-11e8-9dbc-bc6f1c422532.png)
 
 ***
